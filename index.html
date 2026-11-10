@@ -1,4 +1,6 @@
 <title>TCT Commercial Dashboard</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230E1E35'/%3E%3Ctext x='32' y='44' font-family='Georgia%2C Times New Roman%2C serif' font-size='26' font-weight='700' fill='%23FFFFFF' text-anchor='middle' letter-spacing='1'%3ETCT%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230E1E35'/%3E%3Ctext x='32' y='44' font-family='Georgia%2C Times New Roman%2C serif' font-size='26' font-weight='700' fill='%23FFFFFF' text-anchor='middle' letter-spacing='1'%3ETCT%3C/text%3E%3C/svg%3E">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -405,7 +407,7 @@ tr.total-row td {
       </div>
     </div>
     <div class="header-right">
-      <div class="snapshot-badge">WeTravel snapshot: Oct 27 2026</div>
+      <div class="snapshot-badge">WeTravel snapshot: Nov 10 2026</div>
       <button class="theme-btn" onclick="toggleTheme()">◐</button>
     </div>
   </div>
@@ -415,7 +417,7 @@ tr.total-row td {
 
   <!-- KPI PULSE -->
   <div class="section">
-    <div class="section-label">2026 Commercial Pulse — YTD (Jan–Oct Actuals)</div>
+    <div class="section-label">2026 Commercial Pulse — YTD (Jan–Oct Actuals + Nov 10 Forward Bookings)</div>
     <div class="kpi-grid">
       <div class="kpi-tile positive">
         <div class="kpi-label">Booking Revenue YTD</div>
@@ -704,6 +706,34 @@ tr.total-row td {
     </div>
   </div>
 
+  <!-- MOVEMENT SINCE LAST UPDATE -->
+  <div class="section">
+    <div class="section-label">Movement Since Last Update — Oct 27 → Nov 10 2026</div>
+    <div class="card">
+      <div class="card-body">
+        <div id="movementSummary" style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px"></div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Trip</th>
+                <th>Departure</th>
+                <th class="right">Pax Oct 27</th>
+                <th class="right">Pax Nov 10</th>
+                <th class="right">Change</th>
+                <th class="right">Revenue Oct 27</th>
+                <th class="right">Revenue Nov 10</th>
+                <th class="right">Rev Δ</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="movementTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- TRIP HEALTH TABLE -->
   <div class="section">
     <div class="section-label">Trip Occupancy & Health — Next 9 Months</div>
@@ -958,22 +988,24 @@ trips2026.forEach(d => {
 
 // ─── 2027 TRIP TABLE ───
 const trips2027 = [
-  {t:'Florida',r:166400,p:0,ep:0,s:52,c:15,m:-0.032},
-  {t:'Texas',r:169000,p:97500,ep:19000,s:52,c:30,m:0.312},
-  {t:'Southeast',r:176800,p:122400,ep:30000,s:52,c:36,m:0.462},
-  {t:'Arizona',r:218400,p:142800,ep:30000,s:52,c:34,m:0.300},
-  {t:'Italy #1',r:108054,p:47310,ep:25000,s:23,c:13,m:0.504},
-  {t:'Northern CA',r:255000,p:224400,ep:40000,s:48,c:44,m:0.211},
-  {t:'Spring Mystery',r:67600,p:67600,ep:20000,s:52,c:52,m:0.365},
-  {t:'Door County',r:85800,p:85800,ep:25000,s:52,c:52,m:0.329},
-  {t:'Alaska',r:273600,p:159600,ep:25000,s:48,c:28,m:0.132},
-  {t:'Alaska L/C',r:340000,p:288000,ep:30000,s:40,c:28,m:0.161},
-  {t:'Rhine River',r:400000,p:0,ep:55000,s:50,c:53,m:0.100},
-  {t:'Colorado Trains',r:234000,p:153000,ep:70000,s:52,c:34,m:0.321},
-  {t:'Mississippi R.',r:91000,p:25435,ep:40000,s:52,c:52,m:0.578},
-  {t:'Ireland #1',r:90000,p:0,ep:15000,s:30,c:12,m:0.500},
-  {t:'Ireland #2',r:95300,p:60382,ep:30000,s:30,c:21,m:0.336},
-  {t:'Japan #1',r:247500,p:138600,ep:18000,s:25,c:14,m:0.186},
+  {t:'Florida',r:51000,p:0,ep:0,s:52,c:15,m:-0.032},
+  {t:'Texas',r:103600,p:0,ep:19000,s:52,c:31,m:0.312},
+  {t:'Southeast',r:127350,p:0,ep:30000,s:52,c:36,m:0.462},
+  {t:'Arizona',r:142800,p:0,ep:30000,s:52,c:34,m:0.300},
+  {t:'Italy #1',r:93350,p:0,ep:25000,s:25,c:13,m:0.504},
+  {t:'Ark Encounter',r:69900,p:0,ep:20000,s:52,c:40,m:0.350},
+  {t:'Portugal',r:5350,p:0,ep:0,s:25,c:2,m:0.080},
+  {t:'Kansas City/KC',r:11700,p:0,ep:5000,s:52,c:6,m:0.200},
+  {t:'Michigan Tulips',r:28200,p:0,ep:10000,s:52,c:17,m:0.280},
+  {t:'Ireland #1',r:59400,p:0,ep:15000,s:30,c:12,m:0.500},
+  {t:'Northern CA',r:239700,p:0,ep:40000,s:52,c:46,m:0.211},
+  {t:'Nashville',r:34550,p:0,ep:12000,s:52,c:17,m:0.300},
+  {t:'Japan #1',r:141350,p:0,ep:18000,s:25,c:14,m:0.186},
+  {t:'Alaska',r:190350,p:0,ep:25000,s:49,c:33,m:0.132},
+  {t:'Ireland #2',r:100950,p:0,ep:30000,s:30,c:21,m:0.336},
+  {t:'Colorado Trains',r:154400,p:0,ep:70000,s:52,c:34,m:0.321},
+  {t:'Japan #2',r:0,p:0,ep:0,s:25,c:0,m:0.0},
+  {t:'England & Scotland',r:0,p:0,ep:0,s:25,c:0,m:0.0},
 ];
 
 const tb27 = document.getElementById('trips2027');
@@ -989,8 +1021,76 @@ trips2027.forEach(d => {
   </tr>`;
 });
 
-// ─── TRIP HEALTH TABLE (WeTravel data, Oct 27) ───
-const today = new Date('2026-10-27');
+// ─── MOVEMENT PANEL (Oct 27 → Nov 10) ───
+const snapshotPrev = 'Oct 27';
+const snapshotNow  = 'Nov 10';
+const movement = [
+  {name:'Florida',          dep:'2027-01-11', paxPrev:15, paxNow:15, revPrev:51000,  revNow:51000,  note:'No movement — BF campaign needed urgently'},
+  {name:'Texas',            dep:'2027-02-15', paxPrev:30, paxNow:31, revPrev:103600, revNow:103600, note:'+1 pax'},
+  {name:'Southeast',        dep:'2027-03-01', paxPrev:36, paxNow:36, revPrev:127350, revNow:127350, note:'Holding steady'},
+  {name:'Arizona',          dep:'2027-03-08', paxPrev:34, paxNow:34, revPrev:142800, revNow:142800, note:'Holding steady'},
+  {name:'Ark Encounter',    dep:'2027-04-12', paxPrev:40, paxNow:40, revPrev:69900,  revNow:69900,  note:'Strong — 77% capacity'},
+  {name:'Michigan Tulips',  dep:'2027-05-03', paxPrev:15, paxNow:17, revPrev:24700,  revNow:28200,  note:'+2 pax (+$3,500)'},
+  {name:'Ireland #1',       dep:'2027-05-03', paxPrev:12, paxNow:12, revPrev:59400,  revNow:59400,  note:'No movement'},
+  {name:'Northern CA',      dep:'2027-05-10', paxPrev:44, paxNow:46, revPrev:224400, revNow:239700, note:'+2 pax (+$15,300) — nearly sold out'},
+  {name:'Nashville',        dep:'2027-05-17', paxPrev:12, paxNow:17, revPrev:24000,  revNow:34550,  note:'+5 pax (+$10,550) ✓'},
+  {name:'Japan #1',         dep:'2027-05-31', paxPrev:14, paxNow:14, revPrev:141350, revNow:141350, note:'Holding'},
+  {name:'Alaska',           dep:'2027-06-07', paxPrev:28, paxNow:33, revPrev:155700, revNow:190350, note:'+5 pax (+$34,650) ✓'},
+  {name:'Ireland #2',       dep:'2027-08-03', paxPrev:21, paxNow:21, revPrev:100950, revNow:100950, note:'Holding'},
+  {name:'Colorado Trains',  dep:'2027-08-06', paxPrev:34, paxNow:34, revPrev:154400, revNow:154400, note:'Holding steady'},
+  {name:'Italy #1',         dep:'2027-03-30', paxPrev:13, paxNow:13, revPrev:93350,  revNow:93350,  note:'No movement'},
+  {name:'Portugal',         dep:'2027-04-19', paxPrev:2,  paxNow:2,  revPrev:5350,   revNow:5350,   note:'No movement — needs attention'},
+  {name:'Kansas City/KC',   dep:'2027-04-05', paxPrev:6,  paxNow:6,  revPrev:11700,  revNow:11700,  note:'No movement'},
+];
+
+(function renderMovement() {
+  const rows = movement.filter(m => m.paxNow !== m.paxPrev || m.revNow !== m.revPrev || m.note.includes('urgently') || m.note.includes('attention'));
+  const allRows = movement;
+  let totalPaxDelta = 0, totalRevDelta = 0;
+  allRows.forEach(m => { totalPaxDelta += (m.paxNow - m.paxPrev); totalRevDelta += (m.revNow - m.revPrev); });
+
+  // Summary chips
+  const movers = allRows.filter(m => m.paxNow !== m.paxPrev);
+  const noMove = allRows.filter(m => m.paxNow === m.paxPrev && !m.note.includes('urgently') && !m.note.includes('attention'));
+  document.getElementById('movementSummary').innerHTML = `
+    <div style="background:var(--green-bg);border:1px solid var(--green);border-radius:6px;padding:8px 14px;font-size:12px">
+      <span style="color:var(--green);font-weight:600">${movers.length} trips gained pax</span>
+      <span style="color:var(--fg-muted);margin-left:6px">+${totalPaxDelta} travelers · +${fmt$(totalRevDelta)} registered revenue</span>
+    </div>
+    <div style="background:var(--red-bg);border:1px solid var(--red);border-radius:6px;padding:8px 14px;font-size:12px">
+      <span style="color:var(--red);font-weight:600">Florida: 0 movement</span>
+      <span style="color:var(--fg-muted);margin-left:6px">62 days to departure · Black Friday is critical</span>
+    </div>
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:8px 14px;font-size:12px;color:var(--fg-muted)">
+      Snapshot: <strong>${snapshotPrev}</strong> → <strong>${snapshotNow}</strong>
+    </div>`;
+
+  const tb = document.getElementById('movementTable');
+  tb.innerHTML = allRows.map(m => {
+    const paxDelta = m.paxNow - m.paxPrev;
+    const revDelta = m.revNow - m.revPrev;
+    const paxClass = paxDelta > 0 ? 'pos' : paxDelta < 0 ? 'neg' : 'dim';
+    const revClass = revDelta > 0 ? 'pos' : revDelta < 0 ? 'neg' : 'dim';
+    const paxStr  = paxDelta > 0 ? `+${paxDelta}` : paxDelta < 0 ? `${paxDelta}` : '—';
+    const revStr  = revDelta > 0 ? `+${fmt$(revDelta)}` : revDelta < 0 ? `-${fmt$(-revDelta)}` : '—';
+    const depStr  = new Date(m.dep).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    const rowStyle = m.note.includes('urgently') ? 'background:var(--red-bg)' : '';
+    return `<tr style="${rowStyle}">
+      <td>${m.name}</td>
+      <td class="dim num">${depStr}</td>
+      <td class="right num dim">${m.paxPrev}</td>
+      <td class="right num">${m.paxNow}</td>
+      <td class="right num ${paxClass}" style="font-weight:600">${paxStr}</td>
+      <td class="right num dim">${fmt$(m.revPrev)}</td>
+      <td class="right num">${fmt$(m.revNow)}</td>
+      <td class="right num ${revClass}" style="font-weight:600">${revStr}</td>
+      <td class="dim" style="font-size:12px">${m.note}</td>
+    </tr>`;
+  }).join('');
+})();
+
+// ─── TRIP HEALTH TABLE (WeTravel data, Nov 10) ───
+const today = new Date('2026-11-10');
 function daysDiff(d) {
   return Math.round((new Date(d) - today) / 86400000);
 }
@@ -1004,31 +1104,25 @@ function ragColor(pax, cap, days) {
 
 const tripData = [
   {name:'Florida', dep:'2027-01-11', pax:15, cap:52},
-  {name:'Texas', dep:'2027-02-15', pax:30, cap:52},
+  {name:'Texas', dep:'2027-02-15', pax:31, cap:52},
   {name:'Southeast', dep:'2027-03-01', pax:36, cap:52},
   {name:'Arizona Spring Training', dep:'2027-03-08', pax:34, cap:52},
-  {name:'Italy #1', dep:'2027-03-30', pax:13, cap:23},
+  {name:'Italy #1', dep:'2027-03-30', pax:13, cap:25},
   {name:'Portugal', dep:'2027-04-19', pax:2, cap:25},
   {name:'St Louis/KC', dep:'2027-04-05', pax:6, cap:52},
-  {name:'Spring Mystery', dep:'2027-04-23', pax:52, cap:52},
-  {name:'Michigan', dep:'2027-05-03', pax:15, cap:52},
+  {name:'Michigan Tulips', dep:'2027-05-03', pax:17, cap:52},
   {name:'Ireland #1', dep:'2027-05-03', pax:12, cap:30},
-  {name:'Ark', dep:'2027-04-12', pax:40, cap:52},
-  {name:'Northern CA', dep:'2027-05-10', pax:44, cap:48},
-  {name:'Nashville', dep:'2027-05-17', pax:12, cap:52},
+  {name:'Ark Encounter', dep:'2027-04-12', pax:40, cap:52},
+  {name:'Northern CA', dep:'2027-05-10', pax:46, cap:52},
+  {name:'Nashville', dep:'2027-05-17', pax:17, cap:52},
   {name:'Japan #1', dep:'2027-05-31', pax:14, cap:25},
   {name:'Japan #2', dep:'2027-06-21', pax:0, cap:25},
+  {name:'Alaska', dep:'2027-06-07', pax:33, cap:49},
   {name:'Ireland #2', dep:'2027-08-03', pax:21, cap:30},
-  {name:'Alaska', dep:'2027-06-15', pax:28, cap:48},
-  {name:'Alaska Land/Cruise', dep:'2027-07-12', pax:28, cap:40},
-  {name:'Rhine River', dep:'2027-09-20', pax:53, cap:50},
-  {name:'Colorado Trains', dep:'2027-09-05', pax:34, cap:52},
-  {name:'Mississippi R.', dep:'2027-10-03', pax:52, cap:52},
-  {name:'Door County', dep:'2027-06-07', pax:52, cap:52},
-  {name:'Iceland', dep:'2027-07-20', pax:15, cap:15},
-  {name:'Scotland/England', dep:'2027-08-15', pax:0, cap:25},
-  {name:'New England', dep:'2027-10-11', pax:0, cap:52},
-  {name:'Duluth', dep:'2027-09-28', pax:0, cap:52},
+  {name:'Colorado Trains', dep:'2027-08-06', pax:34, cap:52},
+  {name:'England & Scotland', dep:'2027-07-19', pax:0, cap:25},
+  {name:'Rhine River', dep:'2027-07-09', pax:1, cap:1},
+  {name:'Door County', dep:'2027-05-23', pax:0, cap:52},
 ];
 
 function actions(name, pax, cap, days) {
