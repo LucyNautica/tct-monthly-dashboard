@@ -1,6 +1,5 @@
 <title>TCT Commercial Dashboard</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230E1E35'/%3E%3Ctext x='32' y='44' font-family='Georgia%2C Times New Roman%2C serif' font-size='26' font-weight='700' fill='%23FFFFFF' text-anchor='middle' letter-spacing='1'%3ETCT%3C/text%3E%3C/svg%3E">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230E1E35'/%3E%3Ctext x='32' y='44' font-family='Georgia%2C Times New Roman%2C serif' font-size='26' font-weight='700' fill='%23FFFFFF' text-anchor='middle' letter-spacing='1'%3ETCT%3C/text%3E%3C/svg%3E">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -34,28 +33,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0D1117;
-    --bg-card: #161B22;
-    --bg-header: #060D18;
-    --bg-header-border: #21262D;
-    --fg: #E6EDF3;
-    --fg-muted: #7D8590;
-    --fg-header: #E6EDF3;
-    --fg-header-muted: rgba(230,237,243,0.5);
-    --accent: #3B88C8;
-    --accent-light: #0D2137;
-    --border: #21262D;
-    --border-strong: #30363D;
-    --green: #3FB673;
-    --green-bg: #0D2818;
-    --amber: #D97706;
-    --amber-bg: #271D08;
-    --red: #E05E52;
-    --red-bg: #2A1010;
-    --bar-track: #21262D;
-    --shadow: 0 1px 3px rgba(0,0,0,.3);
-    --shadow-sm: 0 1px 2px rgba(0,0,0,.2);
-    color-scheme: dark;
+    --bg: #0D1117; --bg-card: #161B22; --bg-header: #060D18;
+    --bg-header-border: #21262D; --fg: #E6EDF3; --fg-muted: #7D8590;
+    --fg-header: #E6EDF3; --fg-header-muted: rgba(230,237,243,0.5);
+    --accent: #3B88C8; --accent-light: #0D2137; --border: #21262D;
+    --border-strong: #30363D; --green: #3FB673; --green-bg: #0D2818;
+    --amber: #D97706; --amber-bg: #271D08; --red: #E05E52; --red-bg: #2A1010;
+    --bar-track: #21262D; --shadow: 0 1px 3px rgba(0,0,0,.3);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.2); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
@@ -90,197 +75,137 @@ body {
   padding: 0 max(24px, env(safe-area-inset-left,0px));
 }
 .header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 56px;
-  max-width: 1280px;
-  margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px; max-width: 1400px; margin: 0 auto;
 }
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+.header-logo { display: flex; align-items: center; gap: 10px; }
 .logo-mark {
-  width: 30px; height: 30px;
-  background: var(--accent);
-  border-radius: 7px;
+  width: 30px; height: 30px; background: var(--accent); border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 600; font-size: 13px; color: #fff;
-  letter-spacing: -0.5px;
+  font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 13px;
+  color: #fff; letter-spacing: -0.5px;
 }
-.header h1 {
-  font-size: 15px; font-weight: 600; color: var(--fg-header);
-  letter-spacing: -0.2px;
-}
-.header-meta {
-  font-size: 12px; color: var(--fg-header-muted);
-  font-family: 'IBM Plex Mono', monospace;
-}
-.header-right {
-  display: flex; align-items: center; gap: 16px;
-}
+.header-right { display: flex; align-items: center; gap: 16px; }
 .snapshot-badge {
   font-size: 11px; font-family: 'IBM Plex Mono', monospace;
-  color: var(--fg-header-muted);
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 4px; padding: 3px 8px;
+  color: var(--fg-header-muted); background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 3px 8px;
 }
 .theme-btn {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 6px;
-  color: var(--fg-header);
-  cursor: pointer;
-  font-size: 13px;
-  padding: 4px 10px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px; color: var(--fg-header); cursor: pointer;
+  font-size: 13px; padding: 4px 10px;
 }
 .theme-btn:hover { background: rgba(255,255,255,0.14); }
 
 /* LAYOUT */
 .main {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 1400px; margin: 0 auto;
   padding: 28px max(20px, env(safe-area-inset-left,0px));
   padding-bottom: max(40px, env(safe-area-inset-bottom,0px));
 }
 .section { margin-bottom: 32px; }
 .section-label {
   font-size: 11px; font-weight: 600; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--fg-muted);
-  margin-bottom: 12px;
+  text-transform: uppercase; color: var(--fg-muted); margin-bottom: 12px;
 }
 
 /* CARDS */
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
 }
-.card-header {
-  padding: 16px 20px 0;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.card-title {
-  font-size: 13px; font-weight: 600; color: var(--fg);
-}
-.card-sub {
-  font-size: 11px; color: var(--fg-muted); margin-top: 1px;
-}
+.card-header { padding: 16px 20px 0; display: flex; align-items: center; justify-content: space-between; }
+.card-title { font-size: 13px; font-weight: 600; color: var(--fg); }
+.card-sub { font-size: 11px; color: var(--fg-muted); margin-top: 1px; }
 .card-body { padding: 16px 20px 20px; }
 
 /* KPI PULSE TILES */
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
+@media (max-width: 900px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .kpi-grid { grid-template-columns: 1fr 1fr; } }
+
 .kpi-tile {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  padding: 16px 18px;
-  position: relative;
-  overflow: hidden;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow-sm);
+  padding: 16px 18px; position: relative; overflow: hidden;
 }
 .kpi-label {
-  font-size: 11px; font-weight: 500; text-transform: uppercase;
-  letter-spacing: .06em; color: var(--fg-muted);
-  margin-bottom: 6px;
+  font-size: 10px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--fg-muted); margin-bottom: 6px;
 }
 .kpi-value {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 26px; font-weight: 600;
-  color: var(--fg); line-height: 1;
-  margin-bottom: 6px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 600;
+  color: var(--fg); line-height: 1; margin-bottom: 5px;
 }
 .kpi-delta {
-  font-size: 12px; font-family: 'IBM Plex Mono', monospace;
-  display: flex; align-items: center; gap: 4px;
+  font-size: 11px; font-family: 'IBM Plex Mono', monospace;
+  display: flex; align-items: flex-start; gap: 4px; flex-wrap: wrap;
 }
+.kpi-sub-row { margin-top: 4px; font-size: 10.5px; color: var(--fg-muted); font-family: 'IBM Plex Mono', monospace; }
 .delta-up { color: var(--green); }
 .delta-down { color: var(--red); }
 .delta-neutral { color: var(--fg-muted); }
 .kpi-bar {
-  height: 3px;
-  background: var(--bar-track);
-  border-radius: 2px;
-  margin-top: 12px;
-  overflow: hidden;
+  height: 3px; background: var(--bar-track); border-radius: 2px;
+  margin-top: 10px; overflow: hidden;
 }
 .kpi-bar-fill {
-  height: 100%;
-  border-radius: 2px;
-  background: var(--accent);
-  transition: width .4s ease;
+  height: 100%; border-radius: 2px; background: var(--accent); transition: width .4s ease;
 }
 .kpi-tile.positive .kpi-bar-fill { background: var(--green); }
 .kpi-tile.warning .kpi-bar-fill { background: var(--amber); }
 
-/* CHART SECTION */
-.chart-card { padding: 20px; }
-.chart-title {
-  font-size: 13px; font-weight: 600; margin-bottom: 4px;
+/* Equal tiles — no wide tile */
+
+/* DUAL PROGRESS BARS */
+.dual-bars { display: flex; flex-direction: column; gap: 5px; margin-top: 10px; }
+.dual-bar-row { display: flex; align-items: center; gap: 8px; }
+.dual-bar-label { font-size: 9px; color: var(--fg-muted); font-family: 'IBM Plex Mono', monospace; min-width: 72px; }
+.dual-bar-track { flex: 1; height: 4px; background: var(--bar-track); border-radius: 2px; overflow: hidden; }
+.dual-bar-fill { height: 100%; border-radius: 2px; }
+.dual-bar-val { font-size: 9px; font-family: 'IBM Plex Mono', monospace; color: var(--fg-muted); min-width: 36px; text-align: right; }
+
+/* MONTHLY CHART — full width */
+.chart-wrap {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 20px;
 }
-.chart-subtitle {
-  font-size: 11px; color: var(--fg-muted); margin-bottom: 20px;
-}
+.chart-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+.chart-title { font-size: 14px; font-weight: 600; }
+.chart-subtitle { font-size: 11px; color: var(--fg-muted); margin-top: 2px; }
 .chart-legend {
-  display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;
+  display: flex; gap: 14px; flex-wrap: wrap; align-items: center; flex-shrink: 0;
 }
-.legend-item {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 11px; color: var(--fg-muted);
-}
-.legend-dot {
-  width: 10px; height: 10px; border-radius: 2px;
-  flex-shrink: 0;
-}
-.chart-container {
-  position: relative;
-  overflow-x: auto;
-}
-svg.bar-chart {
-  display: block;
-  overflow: visible;
-}
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--fg-muted); }
+.legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+.chart-container { overflow-x: auto; }
+svg.bar-chart { display: block; overflow: visible; }
 
 /* TABLES */
 .table-wrap { overflow-x: auto; }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
 th {
-  text-align: left;
-  font-size: 10.5px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  color: var(--fg-muted);
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--border);
-  white-space: nowrap;
+  text-align: left; font-size: 10.5px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .06em; color: var(--fg-muted);
+  padding: 8px 12px; border-bottom: 1px solid var(--border); white-space: nowrap;
 }
 th.right, td.right { text-align: right; }
 td {
-  padding: 9px 12px;
-  border-bottom: 1px solid var(--border);
-  color: var(--fg);
-  white-space: nowrap;
+  padding: 9px 12px; border-bottom: 1px solid var(--border);
+  color: var(--fg); white-space: nowrap;
 }
 tr:last-child td { border-bottom: none; }
 tr.total-row td {
-  font-weight: 600;
-  background: var(--accent-light);
+  font-weight: 600; background: var(--accent-light);
   border-top: 1px solid var(--border-strong);
 }
+tr.stretch-row td { color: var(--accent); font-weight: 500; }
 .num { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; }
 .pos { color: var(--green); }
 .neg { color: var(--red); }
@@ -288,10 +213,8 @@ tr.total-row td {
 
 /* RAG */
 .rag {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 11px; font-weight: 600;
-  padding: 2px 8px; border-radius: 4px;
-  letter-spacing: .03em;
+  display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600;
+  padding: 2px 8px; border-radius: 4px; letter-spacing: .03em;
 }
 .rag.green { background: var(--green-bg); color: var(--green); }
 .rag.amber { background: var(--amber-bg); color: var(--amber); }
@@ -299,100 +222,107 @@ tr.total-row td {
 
 /* OCCUPANCY BARS */
 .fill-bar-wrap { display: flex; align-items: center; gap: 8px; min-width: 120px; }
-.fill-bar {
-  flex: 1; height: 6px; border-radius: 3px;
-  background: var(--bar-track); overflow: hidden;
-}
+.fill-bar { flex: 1; height: 6px; border-radius: 3px; background: var(--bar-track); overflow: hidden; }
 .fill-bar-inner { height: 100%; border-radius: 3px; }
 .fill-pct { font-family: 'IBM Plex Mono', monospace; font-size: 11px; min-width: 32px; text-align: right; }
 
 /* FILTER BUTTONS */
-.filter-row {
-  display: flex; gap: 8px; flex-wrap: wrap;
-  margin-bottom: 14px;
-}
+.filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
 .filter-btn {
-  font-size: 12px; font-family: 'Inter', sans-serif;
-  padding: 4px 12px; border-radius: 5px;
-  border: 1px solid var(--border-strong);
-  background: var(--bg-card); color: var(--fg-muted);
+  font-size: 12px; font-family: 'Inter', sans-serif; padding: 4px 12px; border-radius: 5px;
+  border: 1px solid var(--border-strong); background: var(--bg-card); color: var(--fg-muted);
   cursor: pointer; transition: all .15s;
 }
 .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
-.filter-btn.active {
-  background: var(--accent); color: #fff; border-color: var(--accent);
-}
+.filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 /* Q TRACKER */
-.q-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-}
-.q-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 14px 16px;
-}
-.q-label {
-  font-size: 11px; font-weight: 600; text-transform: uppercase;
-  letter-spacing: .06em; color: var(--fg-muted); margin-bottom: 8px;
-}
+.q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.q-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.q-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-muted); margin-bottom: 8px; }
 .q-val { font-family: 'IBM Plex Mono', monospace; font-size: 20px; font-weight: 600; }
 .q-target { font-size: 11px; color: var(--fg-muted); margin-top: 2px; }
-.q-status {
-  font-size: 11px; font-weight: 600;
-  margin-top: 6px;
-}
+.q-status { font-size: 11px; font-weight: 600; margin-top: 6px; }
 
-/* EBIT */
-.ebit-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-@media (max-width: 640px) {
-  .ebit-grid { grid-template-columns: 1fr; }
-  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-}
+/* 2-COL GRID */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 800px) { .two-col { grid-template-columns: 1fr; } }
 
 /* TOUR PROFIT TABLE */
 .trip-profit-badge {
-  display: inline-block;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px; font-weight: 600;
-  padding: 1px 7px; border-radius: 4px;
+  display: inline-block; font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 4px;
 }
 .badge-pos { background: var(--green-bg); color: var(--green); }
 .badge-neg { background: var(--red-bg); color: var(--red); }
 
 /* UPDATE PROCESS BANNER */
 .update-banner {
-  background: var(--accent-light);
-  border: 1px solid var(--accent);
-  border-radius: var(--radius-sm);
-  padding: 12px 16px;
-  margin-bottom: 20px;
+  background: var(--accent-light); border: 1px solid var(--accent);
+  border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 20px;
   display: flex; gap: 10px; align-items: flex-start;
 }
 .update-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
 .update-text { font-size: 12px; line-height: 1.6; }
 .update-text strong { font-weight: 600; color: var(--accent); }
 
-/* DIVIDER */
-.divider { height: 1px; background: var(--border); margin: 0; }
-
-/* BONUS */
-.bonus-highlight {
-  background: var(--green-bg);
-  border-radius: var(--radius-sm);
-  padding: 12px 16px;
-  display: flex; justify-content: space-between; align-items: center;
+/* WEEKLY CHANGE PANEL */
+.change-header {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; align-items: center;
 }
-.bonus-label { font-size: 12px; color: var(--green); font-weight: 500; }
-.bonus-val { font-family: 'IBM Plex Mono', monospace; font-size: 18px; font-weight: 700; color: var(--green); }
+.change-chip {
+  display: flex; align-items: center; gap: 8px; padding: 7px 12px;
+  border-radius: 6px; font-size: 12px; border: 1px solid;
+}
+.chip-green { background: var(--green-bg); border-color: var(--green); }
+.chip-red { background: var(--red-bg); border-color: var(--red); }
+.chip-neutral { background: var(--bg-card); border-color: var(--border); color: var(--fg-muted); }
 </style>
+
+<!-- PASSWORD GATE -->
+<script>
+(function() {
+  const HASH = "a381185a46a7cfc6ac402859d77af5906637e9fab4f55d8670bf60689710ffc7";
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,"0")).join("");
+  }
+  function showGate() {
+    const gate = document.createElement("div");
+    gate.id = "pw-gate";
+    gate.style.cssText = "position:fixed;inset:0;background:#0E1E35;display:flex;align-items:center;justify-content:center;z-index:9999;font-family:Inter,sans-serif";
+    gate.innerHTML = `
+      <div style="background:#1a2e4a;border-radius:14px;padding:40px 48px;text-align:center;min-width:320px;max-width:400px;width:90%">
+        <img src="https://www.tomschristiantours.com/logo-white.webp" alt="TCT" style="height:36px;margin-bottom:28px;display:block;margin-left:auto;margin-right:auto" onerror="this.style.display='none'">
+        <p style="color:rgba(255,255,255,0.7);font-size:13px;margin:0 0 20px">Tom's Christian Tours · Commercial Dashboard</p>
+        <input id="pw-input" type="password" placeholder="Enter password" autocomplete="off"
+          style="width:100%;box-sizing:border-box;padding:11px 14px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;outline:none;margin-bottom:12px;letter-spacing:0.05em">
+        <button id="pw-btn" style="width:100%;padding:11px;border-radius:8px;background:#1B6CA8;color:#fff;font-size:15px;font-weight:600;border:none;cursor:pointer">Unlock</button>
+        <p id="pw-err" style="color:#f87171;font-size:12px;margin:12px 0 0;display:none">Incorrect password. Please try again.</p>
+      </div>`;
+    document.body.appendChild(gate);
+    const inp = gate.querySelector("#pw-input");
+    const btn = gate.querySelector("#pw-btn");
+    const err = gate.querySelector("#pw-err");
+    async function attempt() {
+      const h = await sha256(inp.value);
+      if (h === HASH) {
+        try { sessionStorage.setItem("tct_auth","1"); } catch(e){}
+        gate.remove();
+      } else {
+        err.style.display = "block";
+        inp.value = ""; inp.focus();
+      }
+    }
+    btn.addEventListener("click", attempt);
+    inp.addEventListener("keydown", e => { if(e.key==="Enter") attempt(); });
+    inp.focus();
+  }
+  let authed = false;
+  try { authed = sessionStorage.getItem("tct_auth") === "1"; } catch(e){}
+  if (!authed) showGate();
+})();
+</script>
 
 <div class="header">
   <div class="header-inner">
@@ -402,12 +332,12 @@ tr.total-row td {
         <div class="logo-mark">TCT</div>
       </div>
       <div style="margin-left:4px">
-        <div class="header h1" style="font-size:15px;font-weight:600;color:var(--fg-header)">Commercial Dashboard</div>
-        <div class="header-meta">Transcend Consultancy · Lucy Buckmaster</div>
+        <div style="font-size:15px;font-weight:600;color:var(--fg-header)">Commercial Dashboard</div>
+        <div style="font-size:12px;color:var(--fg-header-muted);font-family:'IBM Plex Mono',monospace">Transcend Consultancy · Lucy Buckmaster</div>
       </div>
     </div>
     <div class="header-right">
-      <div class="snapshot-badge">WeTravel snapshot: Nov 10 2026</div>
+      <div class="snapshot-badge">Updated: Nov 24 2026</div>
       <button class="theme-btn" onclick="toggleTheme()">◐</button>
     </div>
   </div>
@@ -415,79 +345,121 @@ tr.total-row td {
 
 <div class="main">
 
-  <!-- KPI PULSE -->
+  <!-- ── 1. KPI PULSE ── -->
   <div class="section">
-    <div class="section-label">2026 Commercial Pulse — YTD (Jan–Oct Actuals + Nov 10 Forward Bookings)</div>
+    <div class="section-label">2026 Commercial Pulse — YTD Jan–Nov Actuals</div>
     <div class="kpi-grid">
+
+      <!-- BOOKING REVENUE -->
       <div class="kpi-tile positive">
         <div class="kpi-label">Booking Revenue YTD</div>
-        <div class="kpi-value">$2.86M</div>
-        <div class="kpi-delta delta-up">▲ +39.4% vs 2025 ($2.05M)</div>
-        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:81.6%"></div></div>
-      </div>
-      <div class="kpi-tile positive">
-        <div class="kpi-label">vs 2026 Targets (YTD Oct)</div>
-        <div class="kpi-value">$2.86M</div>
-        <div class="kpi-delta delta-up">▲ +$357K vs $2.5M base · $643K to $3.5M stretch</div>
-        <div style="display:flex;gap:6px;margin-top:12px">
-          <div style="flex:1">
-            <div style="font-size:9px;color:var(--fg-muted);margin-bottom:3px;font-family:'IBM Plex Mono',monospace">BASE $2.5M</div>
-            <div class="kpi-bar"><div class="kpi-bar-fill" style="width:100%;background:var(--green)"></div></div>
+        <div class="kpi-value">$3.05M</div>
+        <div class="kpi-delta delta-up">▲ +48.4% vs $2.05M in 2025</div>
+        <div class="dual-bars">
+          <div class="dual-bar-row">
+            <div class="dual-bar-label">BASE $2.5M</div>
+            <div class="dual-bar-track"><div class="dual-bar-fill" style="width:100%;background:var(--green)"></div></div>
+            <div class="dual-bar-val" style="color:var(--green)">✓ Beat</div>
           </div>
-          <div style="flex:1">
-            <div style="font-size:9px;color:var(--fg-muted);margin-bottom:3px;font-family:'IBM Plex Mono',monospace">STRETCH $3.5M</div>
-            <div class="kpi-bar"><div class="kpi-bar-fill" style="width:81.6%;background:var(--accent)"></div></div>
+          <div class="dual-bar-row">
+            <div class="dual-bar-label">STRETCH $3.5M</div>
+            <div class="dual-bar-track"><div class="dual-bar-fill" style="width:87.1%;background:var(--accent)"></div></div>
+            <div class="dual-bar-val">87.1%</div>
+          </div>
+        </div>
+        <div class="kpi-sub-row">+$548K vs base · 827 bookings · 1 month remaining</div>
+      </div>
+
+      <!-- DEPARTURE REVENUE -->
+      <div class="kpi-tile">
+        <div class="kpi-label">Departure Revenue YTD</div>
+        <div class="kpi-value">$3.08M</div>
+        <div class="kpi-delta delta-up">▲ vs $2.43M in 2025</div>
+        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:80%"></div></div>
+      </div>
+
+      <!-- GROSS MARGIN AMOUNT -->
+      <div class="kpi-tile positive">
+        <div class="kpi-label">Gross Margin — Amount</div>
+        <div class="kpi-value">$818K</div>
+        <div class="kpi-delta delta-up">▲ from $590K in 2025</div>
+        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:66%"></div></div>
+      </div>
+
+      <!-- GROSS MARGIN % -->
+      <div class="kpi-tile positive">
+        <div class="kpi-label">Gross Margin %</div>
+        <div class="kpi-value">26.6%</div>
+        <div class="kpi-delta delta-up">▲ vs 19.0% in 2025</div>
+        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:26.6%"></div></div>
+      </div>
+
+      <!-- EBITDA -->
+      <div class="kpi-tile positive">
+        <div class="kpi-label">EBITDA YTD</div>
+        <div class="kpi-value">$473K</div>
+        <div class="kpi-delta delta-up">▲ 15.4% margin</div>
+        <div class="kpi-sub-row">Forecast full-year: 12.2%</div>
+        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:15.4%"></div></div>
+      </div>
+
+      <!-- TOTAL BOOKINGS -->
+      <div class="kpi-tile">
+        <div class="kpi-label">Total Bookings YTD</div>
+        <div class="kpi-value">827</div>
+        <div class="kpi-delta delta-neutral" style="font-size:10px;flex-wrap:wrap">Jan–Nov 2026</div>
+        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:84%"></div></div>
+      </div>
+
+      <!-- AVG BOOKING VALUE -->
+      <div class="kpi-tile positive">
+        <div class="kpi-label">Avg Booking Value — 2026</div>
+        <div class="kpi-value">$3,686</div>
+        <div class="kpi-delta delta-up">▲ +3.2% vs $3,570 in 2025</div>
+        <div class="kpi-sub-row">$3,686.28 per booking transaction</div>
+        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:97%"></div></div>
+      </div>
+
+      <!-- 2027 PIPELINE FILL -->
+      <div class="kpi-tile warning">
+        <div class="kpi-label">2027 Pipeline Fill</div>
+        <div class="kpi-value">49.0%</div>
+        <div class="kpi-delta delta-neutral">401 pax / 819 seats · 21 trips</div>
+        <div class="kpi-sub-row">$1.65M booked · $5.0M base target</div>
+        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:49%;background:var(--amber)"></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── 2. MONTHLY REVENUE CHART — FULL WIDTH ── -->
+  <div class="section">
+    <div class="section-label">Monthly Booking Revenue — 2025 Actuals · 2026 Actuals · 2026 Forecast</div>
+    <div class="chart-wrap">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Month-by-Month Booking Revenue</div>
+          <div class="chart-subtitle">WeTravel + Collette combined. Dashed line = $3.5M annual target by seasonality. Lighter bars = 2025, darker = 2026.</div>
+        </div>
+        <div class="chart-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#7BAFD4;opacity:.8"></div>2025 Actual</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#1B3D6F"></div>2026 Actual</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#E5E3DE;border:1px solid #aaa"></div>2026 Forecast</div>
+          <div class="legend-item" style="align-items:center">
+            <svg width="22" height="10"><line x1="0" y1="5" x2="22" y2="5" stroke="#1A7A4A" stroke-width="2" stroke-dasharray="5,3"/></svg>
+            <span style="margin-left:4px">$3.5M target</span>
           </div>
         </div>
       </div>
-      <div class="kpi-tile">
-        <div class="kpi-label">Departure Revenue YTD</div>
-        <div class="kpi-value">$3.07M</div>
-        <div class="kpi-delta delta-up">▲ vs $2.43M departures 2025</div>
-        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:78%"></div></div>
-      </div>
-      <div class="kpi-tile positive">
-        <div class="kpi-label">Gross Margin YTD</div>
-        <div class="kpi-value">24.4%</div>
-        <div class="kpi-delta delta-up">▲ vs 19% in 2025</div>
-        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:24.4%"></div></div>
-      </div>
-      <div class="kpi-tile positive">
-        <div class="kpi-label">EBITDA YTD</div>
-        <div class="kpi-value">$555K</div>
-        <div class="kpi-delta delta-up">▲ 19.4% margin (forecast 12.2%)</div>
-        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:19.4%"></div></div>
-      </div>
-      <div class="kpi-tile">
-        <div class="kpi-label">Total Bookings YTD</div>
-        <div class="kpi-value">774</div>
-        <div class="kpi-delta delta-neutral">96 · 85 · 45 · 77 · 52 · 113 · 108 · 66 · 73 · 59</div>
-        <div class="kpi-bar"><div class="kpi-bar-fill" style="width:70%"></div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MONTHLY BOOKING REVENUE CHART -->
-  <div class="section">
-    <div class="section-label">Monthly Booking Revenue — 2026 Actuals vs Forecast</div>
-    <div class="card chart-card">
-      <div class="chart-title">Month-by-Month Booking Revenue</div>
-      <div class="chart-subtitle">Actuals Jan–Oct from KPI sheet (WeTravel + Collette combined). Forecast line = $3.5M annual target split by historical seasonality weighting.</div>
-      <div class="chart-legend">
-        <div class="legend-item"><div class="legend-dot" style="background:#1B6CA8"></div>Actual (beats forecast)</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#E05E52"></div>Actual (below forecast)</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#E5E3DE;border:1px solid #aaa"></div>No data yet</div>
-        <div class="legend-item" style="align-items:center"><svg width="28" height="10"><line x1="0" y1="5" x2="28" y2="5" stroke="#1A7A4A" stroke-width="2" stroke-dasharray="5,3"/></svg><span style="margin-left:4px">$3.5M forecast line</span></div>
-      </div>
       <div class="chart-container">
-        <svg id="barChart" class="bar-chart" width="820" height="280" aria-label="Monthly booking revenue chart"></svg>
+        <svg id="barChart" class="bar-chart" width="1200" height="300" aria-label="Monthly booking revenue chart"></svg>
       </div>
     </div>
   </div>
 
-  <!-- Q TRACKER -->
+  <!-- ── 3. QUARTERLY TRACKER ── -->
   <div class="section">
-    <div class="section-label">Quarterly Booking Revenue Tracker — 2026 (Baseline Target: $625K/quarter · Annual $2.5M)</div>
+    <div class="section-label">Quarterly Booking Revenue Tracker — 2026 (Base: $625K/qtr · Annual $2.5M)</div>
     <div class="q-grid">
       <div class="q-card">
         <div class="q-label">Q1 Jan–Mar</div>
@@ -516,15 +488,17 @@ tr.total-row td {
     </div>
   </div>
 
-  <!-- 3-YEAR REVENUE COMPARISON -->
+  <!-- ── 4. 3-YEAR COMPARISON ── -->
   <div class="section">
     <div class="section-label">3-Year Revenue Comparison</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div class="two-col">
+
+      <!-- BOOKING REVENUE: target + stretch -->
       <div class="card">
         <div class="card-header">
           <div>
             <div class="card-title">Booking Revenue</div>
-            <div class="card-sub">When sold (includes WeTravel + Collette)</div>
+            <div class="card-sub">When sold — WeTravel + Collette</div>
           </div>
         </div>
         <div class="card-body">
@@ -546,39 +520,41 @@ tr.total-row td {
                   <td class="right dim num">—</td>
                 </tr>
                 <tr>
-                  <td>2026 YTD</td>
+                  <td>2026 YTD (Oct)</td>
                   <td class="right num">$2,857,623</td>
-                  <td class="right pos num">+$804K</td>
+                  <td class="right pos num">+39.4%</td>
                   <td class="right pos num">+$358K</td>
                 </tr>
                 <tr>
                   <td>2026 Forecast</td>
                   <td class="right num">$3,500,000</td>
-                  <td class="right pos num">+70%</td>
-                  <td class="right pos num">+$1.0M</td>
+                  <td class="right pos num">+70.5%</td>
+                  <td class="right pos num">Base ✓</td>
                 </tr>
                 <tr class="total-row">
-                  <td>2027 Target</td>
+                  <td>2027 Base Target</td>
                   <td class="right num">$5,000,000</td>
                   <td class="right pos num">+43%</td>
                   <td class="right dim num">Base</td>
                 </tr>
-                <tr>
-                  <td style="color:var(--accent)">2027 Stretch</td>
-                  <td class="right num" style="color:var(--accent)">$6,000,000</td>
+                <tr class="stretch-row">
+                  <td>2027 Stretch</td>
+                  <td class="right num">$6,000,000</td>
                   <td class="right pos num">+71%</td>
-                  <td class="right" style="color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12.5px">+$1M</td>
+                  <td class="right num">+$1.0M</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
+
+      <!-- DEPARTURE REVENUE: target + stretch (no COGS/OpEx) -->
       <div class="card">
         <div class="card-header">
           <div>
             <div class="card-title">Departure Revenue</div>
-            <div class="card-sub">Revenue recognised when trip departs</div>
+            <div class="card-sub">Recognised when trip departs</div>
           </div>
         </div>
         <div class="card-body">
@@ -596,7 +572,7 @@ tr.total-row td {
                 <tr>
                   <td class="dim">2025 Actual</td>
                   <td class="right num">$2,430,506</td>
-                  <td class="right num">19%</td>
+                  <td class="right num">19.0%</td>
                   <td class="right dim num">—</td>
                 </tr>
                 <tr>
@@ -608,20 +584,20 @@ tr.total-row td {
                 <tr>
                   <td>2026 Forecast</td>
                   <td class="right num">$3,384,358</td>
-                  <td class="right num">19%</td>
+                  <td class="right num">19.0%</td>
                   <td class="right num">$414K</td>
                 </tr>
                 <tr class="total-row">
-                  <td>2026 COGS YTD</td>
-                  <td class="right num">$1,948,439</td>
-                  <td class="right dim num">—</td>
-                  <td class="right dim num">—</td>
+                  <td>2027 Base Target</td>
+                  <td class="right num">$5,000,000</td>
+                  <td class="right dim num">Base</td>
+                  <td class="right dim num">Base</td>
                 </tr>
-                <tr>
-                  <td>2026 OpEx YTD</td>
-                  <td class="right num">$571K</td>
-                  <td class="right dim num">People + Mktg</td>
-                  <td class="right dim num">—</td>
+                <tr class="stretch-row">
+                  <td>2027 Stretch</td>
+                  <td class="right num">$6,000,000</td>
+                  <td class="right num">+$1.0M</td>
+                  <td class="right num">+$1.0M</td>
                 </tr>
               </tbody>
             </table>
@@ -631,36 +607,30 @@ tr.total-row td {
     </div>
   </div>
 
-  <!-- EBIT / TOUR PROFITABILITY -->
+  <!-- ── 5. TOUR PROFITABILITY ── -->
   <div class="section">
     <div class="section-label">Tour Profitability — 2026 vs 2027 Pipeline</div>
 
     <div class="update-banner">
       <div class="update-icon">ℹ</div>
       <div class="update-text">
-        <strong>Collette Channel Update Process</strong> — Collette revenue (~$577K in 2025 bookings) is not captured in WeTravel.
-        Monthly process: Tom inputs Collette booking revenue into the KPI sheet "Tom Input" tab at month-end → Transcend updates pulse tiles above.
-        All profitability figures below are from the pricing sheets and reflect WeTravel trips only.
+        <strong>Collette Channel</strong> — ~$577K in 2025 bookings not in WeTravel.
+        Tom inputs Collette booking revenue to KPI sheet "Tom Input" tab at month-end → Transcend updates pulse tiles.
+        Profitability below = WeTravel trips only (pricing sheets).
       </div>
     </div>
 
-    <div class="ebit-grid">
+    <div class="two-col">
       <div class="card">
         <div class="card-header">
-          <div class="card-title">2026 Tour Profitability Summary</div>
-          <div class="card-sub">From 2026 pricing sheet</div>
+          <div class="card-title">2026 Tour Profitability</div>
+          <div class="card-sub" style="font-size:11px;color:var(--fg-muted)">From 2026 pricing sheet</div>
         </div>
         <div class="card-body">
           <div class="table-wrap">
             <table>
               <thead>
-                <tr>
-                  <th>Trip</th>
-                  <th class="right">Rev Sold</th>
-                  <th class="right">Profit</th>
-                  <th class="right">Margin</th>
-                  <th>Status</th>
-                </tr>
+                <tr><th>Trip</th><th class="right">Rev Sold</th><th class="right">Profit</th><th class="right">Margin</th><th>Pax</th></tr>
               </thead>
               <tbody id="trips2026"></tbody>
               <tr class="total-row">
@@ -677,28 +647,16 @@ tr.total-row td {
       <div class="card">
         <div class="card-header">
           <div class="card-title">2027 Tour Profitability Pipeline</div>
-          <div class="card-sub">From 2027 pricing sheet — early stage</div>
+          <div class="card-sub" style="font-size:11px;color:var(--fg-muted)">Live profit = (list − cost) × pax. Nov 2026 pricing sheet.</div>
         </div>
         <div class="card-body">
           <div class="table-wrap">
             <table>
               <thead>
-                <tr>
-                  <th>Trip</th>
-                  <th class="right">Est Full Rev</th>
-                  <th class="right">Est Profit</th>
-                  <th class="right">Margin</th>
-                  <th>Fill</th>
-                </tr>
+                <tr><th>Trip</th><th class="right">Est Full Rev</th><th class="right">Live Profit</th><th class="right">Margin</th><th>Fill</th></tr>
               </thead>
               <tbody id="trips2027"></tbody>
-              <tr class="total-row">
-                <td><strong>TOTAL</strong></td>
-                <td class="right num">$4,645K</td>
-                <td class="right num pos">$854K est</td>
-                <td class="right num">18.4%</td>
-                <td class="num dim">596/1,347</td>
-              </tr>
+              <tr class="total-row" id="trips2027total"></tr>
             </table>
           </div>
         </div>
@@ -706,37 +664,32 @@ tr.total-row td {
     </div>
   </div>
 
-  <!-- MOVEMENT SINCE LAST UPDATE -->
+  <!-- ── 6. CHANGE IN LAST WEEK ── -->
   <div class="section">
-    <div class="section-label">Movement Since Last Update — Oct 27 → Nov 10 2026</div>
+    <div class="section-label">Change in Last Week — Nov 10 → Nov 24 2026</div>
     <div class="card">
       <div class="card-body">
-        <div id="movementSummary" style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px"></div>
+        <div class="change-header" id="changeSummary"></div>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>Trip</th>
-                <th>Departure</th>
-                <th class="right">Pax Oct 27</th>
-                <th class="right">Pax Nov 10</th>
-                <th class="right">Change</th>
-                <th class="right">Revenue Oct 27</th>
-                <th class="right">Revenue Nov 10</th>
-                <th class="right">Rev Δ</th>
+                <th>Trip</th><th>Departure</th>
+                <th class="right">Pax Before</th><th class="right">Pax Now</th><th class="right">Change</th>
+                <th class="right">Rev Before</th><th class="right">Rev Now</th><th class="right">Rev Δ</th>
                 <th>Notes</th>
               </tr>
             </thead>
-            <tbody id="movementTable"></tbody>
+            <tbody id="changeTable"></tbody>
           </table>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- TRIP HEALTH TABLE -->
+  <!-- ── 7. TRIP OCCUPANCY ── -->
   <div class="section">
-    <div class="section-label">Trip Occupancy & Health — Next 9 Months</div>
+    <div class="section-label">Trip Occupancy &amp; Health — Next 9 Months</div>
     <div class="card">
       <div class="card-body">
         <div class="filter-row">
@@ -748,15 +701,7 @@ tr.total-row td {
         <div class="table-wrap">
           <table>
             <thead>
-              <tr>
-                <th>Trip</th>
-                <th>Departure</th>
-                <th class="right">Pax</th>
-                <th class="right">Cap</th>
-                <th>Fill</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
+              <tr><th>Trip</th><th>Departure</th><th class="right">Pax</th><th class="right">Cap</th><th>Fill</th><th>Status</th><th>Actions</th></tr>
             </thead>
             <tbody id="tripTable"></tbody>
           </table>
@@ -768,190 +713,122 @@ tr.total-row td {
 </div>
 
 <script>
-// ─── PASSWORD GATE ───
-(function() {
-  const HASH = "a381185a46a7cfc6ac402859d77af5906637e9fab4f55d8670bf60689710ffc7"; // TCTKPI26!
-  async function sha256(str) {
-    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
-    return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,"0")).join("");
-  }
-  function showGate() {
-    const gate = document.createElement("div");
-    gate.id = "pw-gate";
-    gate.style.cssText = "position:fixed;inset:0;background:#0E1E35;display:flex;align-items:center;justify-content:center;z-index:9999;font-family:Inter,sans-serif";
-    gate.innerHTML = `
-      <div style="background:#1a2e4a;border-radius:14px;padding:40px 48px;text-align:center;min-width:320px;max-width:400px;width:90%">
-        <img src="https://www.tomschristiantours.com/logo-white.webp" alt="TCT" style="height:36px;margin-bottom:28px;display:block;margin-left:auto;margin-right:auto" onerror="this.style.display='none'">
-        <p style="color:rgba(255,255,255,0.7);font-size:13px;margin:0 0 20px">Tom's Christian Tours Monthly KPI Dashboard</p>
-        <input id="pw-input" type="password" placeholder="Enter password" autocomplete="off"
-          style="width:100%;box-sizing:border-box;padding:11px 14px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;outline:none;margin-bottom:12px;letter-spacing:0.05em">
-        <button id="pw-btn" style="width:100%;padding:11px;border-radius:8px;background:#1B6CA8;color:#fff;font-size:15px;font-weight:600;border:none;cursor:pointer">Unlock</button>
-        <p id="pw-err" style="color:#f87171;font-size:12px;margin:12px 0 0;display:none">Incorrect password. Please try again.</p>
-      </div>`;
-    document.body.appendChild(gate);
-    const inp = gate.querySelector("#pw-input");
-    const btn = gate.querySelector("#pw-btn");
-    const err = gate.querySelector("#pw-err");
-    async function attempt() {
-      const h = await sha256(inp.value);
-      if (h === HASH) {
-        try { sessionStorage.setItem("tct_auth","1"); } catch(e){}
-        gate.remove();
-      } else {
-        err.style.display = "block";
-        inp.value = "";
-        inp.focus();
-      }
-    }
-    btn.addEventListener("click", attempt);
-    inp.addEventListener("keydown", e => { if(e.key==="Enter") attempt(); });
-    inp.focus();
-  }
-  let authed = false;
-  try { authed = sessionStorage.getItem("tct_auth") === "1"; } catch(e){}
-  if (!authed) showGate();
-})();
-
-// ─── THEME TOGGLE ───
+// ─── THEME ───
 function toggleTheme() {
   const r = document.documentElement;
-  const cur = r.getAttribute('data-theme');
-  r.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+  r.setAttribute('data-theme', r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
 }
 
 // ─── FORMAT ───
 function fmt$(n) {
   if (n >= 1000000) return '$' + (n/1000000).toFixed(2) + 'M';
   if (n >= 1000) return '$' + Math.round(n/1000) + 'K';
-  return '$' + n.toLocaleString();
+  return '$' + Math.round(n).toLocaleString();
 }
-function pct(n) { return (n*100).toFixed(1) + '%'; }
 
-// ─── MONTHLY BOOKING REVENUE CHART ───
+// ─── MONTHLY CHART ───
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const actuals = [311583, 389743, 165336, 204348, 187550, 401336, 490224, 206326, 298377, 202800, null, null];
-// 2025 actuals by month (WeTravel channel, ~$2.28M annual total, distributed by seasonality)
-const actuals2025 = [60420, 69084, 42180, 49476, 426816, 93252, 225720, 383616, 202464, 303456, 212892, 211224];
-// Targets from $2.5M × seasonality ratios
-const seasonality = [0.0265, 0.0303, 0.0185, 0.0217, 0.1872, 0.0409, 0.0990, 0.1682, 0.0888, 0.1331, 0.0934, 0.0925];
-const targets = seasonality.map(s => Math.round(2500000 * s));
+const actuals26 = [311583, 389743, 165336, 204348, 187550, 401336, 490224, 206326, 298377, 202800, null, null];
+const actuals25 = [60420, 69084, 42180, 49476, 426816, 93252, 225720, 383616, 202464, 303456, 212892, 211224];
+// 2026 Forecast ($3.5M by seasonality)
+const forecast26 = [92750, 106050, 64750, 75950, 655200, 143150, 346500, 588700, 310800, 465850, 326900, 323750];
 
 function drawChart() {
   const svg = document.getElementById('barChart');
-  const W = 820, H = 260, padL = 64, padR = 16, padT = 20, padB = 48;
+  const W = 1200, H = 280, padL = 70, padR = 20, padT = 28, padB = 50;
   const chartW = W - padL - padR;
   const chartH = H - padT - padB;
   const n = 12;
   const groupW = chartW / n;
-  const barW = Math.min(16, groupW * 0.28);
-  const barGap = 2;
+  // Three bars per month: 2025, 2026 actual/forecast, [gap]
+  const barW = Math.min(18, groupW * 0.26);
+  const barGap = 3;
 
-  // $3.5M annual forecast split by historical seasonality
-  const forecastLine = [92750, 106050, 64750, 75950, 655200, 143150, 346500, 588700, 310800, 465850, 326900, 323750];
-
-  const maxVal = Math.max(...actuals.filter(Boolean), ...actuals2025, ...forecastLine) * 1.12;
+  const maxVal = Math.max(...actuals26.filter(Boolean), ...actuals25, ...forecast26) * 1.13;
 
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
     (!document.documentElement.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme:dark)').matches);
 
-  const colors = {
-    bar2026: '#1B3D6F',
-    bar2025: isDark ? '#4A7EBF' : '#7BAFD4',
-    barFuture: isDark ? '#2A3A4A' : '#E5E3DE',
-    forecastLine: '#1A7A4A',
+  const C = {
+    bar25: isDark ? '#4A7EBF' : '#7BAFD4',
+    bar26: '#1B3D6F',
+    barFcast: isDark ? '#2A3A4A' : '#DDD9D2',
+    fcastLine: '#1A7A4A',
     grid: isDark ? '#21262D' : '#ECEAE5',
     axis: isDark ? '#484F58' : '#C8C5BF',
     text: isDark ? '#7D8590' : '#9096A0',
-    value: isDark ? '#E6EDF3' : '#1A1A2E',
+    label: isDark ? '#E6EDF3' : '#1A1A2E',
     annoBg: isDark ? '#0D1825' : '#E8F0F8',
   };
 
-  function y(v) { return padT + chartH - (v / maxVal) * chartH; }
+  function yv(v) { return padT + chartH - (v / maxVal) * chartH; }
   function xc(i) { return padL + i * groupW + groupW / 2; }
 
-  let html = '';
+  let h = '';
 
-  // grid lines — auto-scale ticks
-  const tickMax = maxVal;
-  const tickStep = tickMax > 500000 ? 200000 : 100000;
-  html += `<g class="grid">`;
-  for (let v = 0; v <= tickMax; v += tickStep) {
-    const yy = y(v);
+  // Grid lines
+  const tStep = maxVal > 500000 ? 200000 : 100000;
+  for (let v = tStep; v <= maxVal; v += tStep) {
+    const yy = yv(v);
     if (yy < padT) break;
-    html += `<line x1="${padL}" y1="${yy}" x2="${W-padR}" y2="${yy}" stroke="${colors.grid}" stroke-width="1"/>`;
-    const label = v === 0 ? '' : (v >= 1000000 ? `$${(v/1000000).toFixed(1)}M` : `$${v/1000}K`);
-    if (label) html += `<text x="${padL-6}" y="${yy+4}" text-anchor="end" font-size="10" fill="${colors.text}" font-family="'IBM Plex Mono',monospace">${label}</text>`;
+    h += `<line x1="${padL}" y1="${yy}" x2="${W-padR}" y2="${yy}" stroke="${C.grid}" stroke-width="1"/>`;
+    const lbl = v >= 1000000 ? `$${(v/1000000).toFixed(1)}M` : `$${v/1000}K`;
+    h += `<text x="${padL-6}" y="${yy+4}" text-anchor="end" font-size="10" fill="${C.text}" font-family="'IBM Plex Mono',monospace">${lbl}</text>`;
   }
-  html += `</g>`;
 
-  // bars — side-by-side 2025 (light) and 2026 (dark)
-  html += `<g class="bars">`;
+  // Bars
   months.forEach((m, i) => {
     const cx = xc(i);
-    const act26 = actuals[i];
-    const act25 = actuals2025[i];
-    const fcast = forecastLine[i];
-    const offset = barW / 2 + barGap / 2;
+    const a25 = actuals25[i];
+    const a26 = actuals26[i];
+    const fc = forecast26[i];
+    // layout: [25 bar][gap][26 bar]  centered on cx
+    const totalW = barW + barGap + barW;
+    const left25 = cx - totalW / 2;
+    const left26 = left25 + barW + barGap;
 
-    // 2025 bar (left, lighter)
-    const ay25 = y(act25);
-    html += `<rect x="${cx - offset - barW}" y="${ay25}" width="${barW}" height="${chartH+padT-ay25}" fill="${colors.bar2025}" rx="2" opacity="0.75"/>`;
+    // 2025 bar
+    const y25 = yv(a25);
+    h += `<rect x="${left25}" y="${y25}" width="${barW}" height="${chartH+padT-y25}" fill="${C.bar25}" rx="2" opacity="0.75"/>`;
 
-    // 2026 bar (right, darker) or future placeholder
-    if (act26 !== null) {
-      const ay26 = y(act26);
-      html += `<rect x="${cx + offset}" y="${ay26}" width="${barW}" height="${chartH+padT-ay26}" fill="${colors.bar2026}" rx="2" opacity="0.9"/>`;
-      // value label above 2026 bar if tall enough
-      const barPx = chartH + padT - ay26;
-      if (barPx > 22) {
-        html += `<text x="${cx + offset + barW/2}" y="${ay26 - 4}" text-anchor="middle" font-size="8" fill="${colors.value}" font-family="'IBM Plex Mono',monospace" font-weight="600">$${Math.round(act26/1000)}K</text>`;
+    // 2026 bar or forecast placeholder
+    if (a26 !== null) {
+      const y26 = yv(a26);
+      h += `<rect x="${left26}" y="${y26}" width="${barW}" height="${chartH+padT-y26}" fill="${C.bar26}" rx="2" opacity="0.9"/>`;
+      const barPx = chartH + padT - y26;
+      if (barPx > 20) {
+        h += `<text x="${left26+barW/2}" y="${y26-4}" text-anchor="middle" font-size="8" fill="${C.label}" font-family="'IBM Plex Mono',monospace" font-weight="600">$${Math.round(a26/1000)}K</text>`;
       }
     } else {
-      const fy = y(fcast);
-      html += `<rect x="${cx + offset}" y="${fy}" width="${barW}" height="${chartH+padT-fy}" fill="${colors.barFuture}" rx="2" opacity="0.45"/>`;
+      const yf = yv(fc);
+      h += `<rect x="${left26}" y="${yf}" width="${barW}" height="${chartH+padT-yf}" fill="${C.barFcast}" rx="2" opacity="0.5" stroke-dasharray="2,2"/>`;
     }
 
-    // month label
-    html += `<text x="${cx}" y="${H-padB+16}" text-anchor="middle" font-size="11" fill="${colors.text}" font-family="'Inter',sans-serif">${m}</text>`;
-    if (i === 9) {
-      html += `<text x="${cx}" y="${H-padB+28}" text-anchor="middle" font-size="9" fill="${colors.bar2026}" font-family="'Inter',sans-serif">← YTD</text>`;
-    }
-  });
-  html += `</g>`;
-
-  // dashed forecast line ($3.5M seasonality)
-  const linePoints = forecastLine.map((v, i) => `${xc(i)},${y(v)}`).join(' ');
-  html += `<polyline points="${linePoints}" fill="none" stroke="${colors.forecastLine}" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>`;
-  // dots on the line
-  forecastLine.forEach((v, i) => {
-    html += `<circle cx="${xc(i)}" cy="${y(v)}" r="3" fill="${colors.forecastLine}" opacity="0.75"/>`;
+    h += `<text x="${cx}" y="${H-padB+16}" text-anchor="middle" font-size="11" fill="${C.text}" font-family="'Inter',sans-serif">${m}</text>`;
+    if (i === 9) h += `<text x="${cx}" y="${H-padB+28}" text-anchor="middle" font-size="9" fill="${C.bar26}" font-family="'Inter',sans-serif">← YTD</text>`;
   });
 
-  // x-axis line
-  html += `<line x1="${padL}" y1="${padT+chartH}" x2="${W-padR}" y2="${padT+chartH}" stroke="${colors.axis}" stroke-width="1"/>`;
+  // Dashed forecast line
+  const pts = forecast26.map((v,i)=>`${xc(i)},${yv(v)}`).join(' ');
+  h += `<polyline points="${pts}" fill="none" stroke="${C.fcastLine}" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>`;
+  forecast26.forEach((v,i)=>{ h += `<circle cx="${xc(i)}" cy="${yv(v)}" r="3" fill="${C.fcastLine}" opacity="0.75"/>`; });
 
-  // YTD annotation badge
-  const ytdTotal = actuals.filter(Boolean).reduce((a,b)=>a+b,0);
-  const ytdFcast = forecastLine.slice(0,10).reduce((a,b)=>a+b,0);
-  const ytdDiff = ytdTotal - ytdFcast;
-  const diffStr = (ytdDiff >= 0 ? '+' : '') + '$' + Math.abs(Math.round(ytdDiff/1000)) + 'K vs forecast';
-  html += `<rect x="${padL}" y="${padT}" width="230" height="28" rx="4" fill="${colors.annoBg}"/>`;
-  html += `<text x="${padL+8}" y="${padT+10}" font-size="9" fill="${colors.bar2026}" font-family="'IBM Plex Mono',monospace">2026 YTD BOOKINGS (Jan–Oct)</text>`;
-  html += `<text x="${padL+8}" y="${padT+22}" font-size="12" font-weight="600" fill="${colors.bar2026}" font-family="'IBM Plex Mono',monospace">$${(ytdTotal/1000000).toFixed(3)}M  ${diffStr}</text>`;
-  // legend
-  const lgX = W - padR - 180;
-  const lgY = padT + 2;
-  html += `<rect x="${lgX}" y="${lgY}" width="10" height="10" fill="${colors.bar2025}" rx="1" opacity="0.75"/>`;
-  html += `<text x="${lgX+14}" y="${lgY+9}" font-size="10" fill="${colors.text}" font-family="'Inter',sans-serif">2025 Actuals</text>`;
-  html += `<rect x="${lgX}" y="${lgY+16}" width="10" height="10" fill="${colors.bar2026}" rx="1" opacity="0.9"/>`;
-  html += `<text x="${lgX+14}" y="${lgY+25}" font-size="10" fill="${colors.text}" font-family="'Inter',sans-serif">2026 Actuals</text>`;
-  html += `<line x1="${lgX}" y1="${lgY+34}" x2="${lgX+10}" y2="${lgY+34}" stroke="${colors.forecastLine}" stroke-width="2" stroke-dasharray="4,3"/>`;
-  html += `<text x="${lgX+14}" y="${lgY+38}" font-size="10" fill="${colors.text}" font-family="'Inter',sans-serif">2026 Forecast</text>`;
+  // X-axis
+  h += `<line x1="${padL}" y1="${padT+chartH}" x2="${W-padR}" y2="${padT+chartH}" stroke="${C.axis}" stroke-width="1"/>`;
 
-  svg.innerHTML = html;
+  // YTD annotation
+  const ytdTotal = actuals26.filter(Boolean).reduce((a,b)=>a+b,0);
+  const ytdFcast = forecast26.slice(0,10).reduce((a,b)=>a+b,0);
+  const diff = ytdTotal - ytdFcast;
+  const diffStr = (diff>=0?'+':'') + '$' + Math.abs(Math.round(diff/1000)) + 'K vs forecast';
+  h += `<rect x="${padL}" y="${padT}" width="240" height="28" rx="4" fill="${C.annoBg}"/>`;
+  h += `<text x="${padL+8}" y="${padT+10}" font-size="9" fill="${C.bar26}" font-family="'IBM Plex Mono',monospace">2026 YTD (Jan–Oct)</text>`;
+  h += `<text x="${padL+8}" y="${padT+22}" font-size="12" font-weight="600" fill="${C.bar26}" font-family="'IBM Plex Mono',monospace">$${(ytdTotal/1000000).toFixed(3)}M  ${diffStr}</text>`;
+
+  svg.innerHTML = h;
 }
 
-// ─── 2026 TRIP TABLE ───
+// ─── 2026 TRIPS ───
 const trips2026 = [
   {t:'Hawaii',r:186088,p:19809,m:0.1065,s:27,c:27},
   {t:'Portugal',r:83158,p:5468,m:0.0658,s:18,c:17},
@@ -973,218 +850,203 @@ const trips2026 = [
   {t:'Shipshewana',r:73950,p:25996,m:0.3515,s:52,c:51},
   {t:'Mystery Tour',r:49348,p:16126,m:0.3268,s:52,c:52},
 ];
-
 const tb26 = document.getElementById('trips2026');
 trips2026.forEach(d => {
-  const isPos = d.p > 0;
   tb26.innerHTML += `<tr>
     <td>${d.t}</td>
     <td class="right num">${fmt$(d.r)}</td>
-    <td class="right"><span class="trip-profit-badge ${isPos?'badge-pos':'badge-neg'}">${fmt$(d.p)}</span></td>
+    <td class="right"><span class="trip-profit-badge ${d.p>0?'badge-pos':'badge-neg'}">${fmt$(d.p)}</span></td>
     <td class="right num ${d.m>0.3?'pos':d.m<0.1?'neg':''}">${(d.m*100).toFixed(1)}%</td>
     <td class="num dim">${d.c}/${d.s}</td>
   </tr>`;
 });
 
-// ─── 2027 TRIP TABLE ───
+// ─── 2027 TRIPS ───
+// Live pax from WeTravel export Nov 24 2026
 const trips2027 = [
-  {t:'Florida',r:51000,p:0,ep:0,s:52,c:15,m:-0.032},
-  {t:'Texas',r:103600,p:0,ep:19000,s:52,c:31,m:0.312},
-  {t:'Southeast',r:127350,p:0,ep:30000,s:52,c:36,m:0.462},
-  {t:'Arizona',r:142800,p:0,ep:30000,s:52,c:34,m:0.300},
-  {t:'Italy #1',r:93350,p:0,ep:25000,s:25,c:13,m:0.504},
-  {t:'Ark Encounter',r:69900,p:0,ep:20000,s:52,c:40,m:0.350},
-  {t:'Portugal',r:5350,p:0,ep:0,s:25,c:2,m:0.080},
-  {t:'Kansas City/KC',r:11700,p:0,ep:5000,s:52,c:6,m:0.200},
-  {t:'Michigan Tulips',r:28200,p:0,ep:10000,s:52,c:17,m:0.280},
-  {t:'Ireland #1',r:59400,p:0,ep:15000,s:30,c:12,m:0.500},
-  {t:'Northern CA',r:239700,p:0,ep:40000,s:52,c:46,m:0.211},
-  {t:'Nashville',r:34550,p:0,ep:12000,s:52,c:17,m:0.300},
-  {t:'Japan #1',r:141350,p:0,ep:18000,s:25,c:14,m:0.186},
-  {t:'Alaska',r:190350,p:0,ep:25000,s:49,c:33,m:0.132},
-  {t:'Ireland #2',r:100950,p:0,ep:30000,s:30,c:21,m:0.336},
-  {t:'Colorado Trains',r:154400,p:0,ep:70000,s:52,c:34,m:0.321},
-  {t:'Japan #2',r:0,p:0,ep:0,s:25,c:0,m:0.0},
-  {t:'England & Scotland',r:0,p:0,ep:0,s:25,c:0,m:0.0},
+  {t:'Florida',         r:57400,  s:52, c:17, costPP:2715.93, listPP:3200},
+  {t:'Texas',           r:103200, s:52, c:31, costPP:2981.28, listPP:3250},
+  {t:'Southeast',       r:138750, s:52, c:39, costPP:2935.22, listPP:3400},
+  {t:'Arizona',         r:142000, s:52, c:34, costPP:3638.28, listPP:4200},
+  {t:'Italy #1',        r:93350,  s:25, c:13, costPP:4713.00, listPP:6950},
+  {t:'Ark Encounter',   r:81700,  s:52, c:47, costPP:1329.83, listPP:1700},
+  {t:'Portugal',        r:16050,  s:25, c:4,  costPP:3100.00, listPP:4400},
+  {t:'Kansas City/KC',  r:15600,  s:52, c:8,  costPP:1662.48, listPP:1950},
+  {t:'Michigan Tulips', r:32800,  s:52, c:20, costPP:1513.76, listPP:1525},
+  {t:'Ireland #1',      r:59400,  s:30, c:12, costPP:3160.00, listPP:4750},
+  {t:'Northern CA',     r:239700, s:52, c:46, costPP:4462.37, listPP:5100},
+  {t:'Nashville',       r:38350,  s:52, c:19, costPP:1775.54, listPP:2000},
+  {t:'Japan #1',        r:141350, s:25, c:14, costPP:8210.00, listPP:9900},
+  {t:'Alaska',          r:190350, s:49, c:33, costPP:5166.37, listPP:5700},
+  {t:'Ireland #2',      r:129450, s:28, c:27, costPP:3160.00, listPP:4750},
+  {t:'Colorado Trains', r:154400, s:52, c:34, costPP:3650.79, listPP:4200},
+  {t:'Japan #2',        r:0,      s:25, c:0,  costPP:8210.00, listPP:9900},
+  {t:'England & Scotland',r:0,    s:25, c:0,  costPP:5240.00, listPP:6200},
+  {t:'Iceland',         r:10598,  s:14, c:2,  costPP:4500.00, listPP:5299},
 ];
-
 const tb27 = document.getElementById('trips2027');
 trips2027.forEach(d => {
   const fill = d.s > 0 ? d.c/d.s : 0;
-  const isPos = d.ep > 0;
+  const profitPP = d.listPP - d.costPP;
+  const liveProfit = profitPP * d.c;
+  const liveMargin = d.r > 0 ? liveProfit / d.r : 0;
   tb27.innerHTML += `<tr>
     <td>${d.t}</td>
     <td class="right num">${fmt$(d.r)}</td>
-    <td class="right"><span class="trip-profit-badge ${isPos?'badge-pos':'badge-neg'}">$${Math.round(d.ep/1000)}K est</span></td>
-    <td class="right num ${d.m>0.3?'pos':d.m<0.1?'neg':''}">${(d.m*100).toFixed(1)}%</td>
+    <td class="right"><span class="trip-profit-badge ${liveProfit>0?'badge-pos':'badge-neg'}">${fmt$(Math.round(liveProfit))}</span></td>
+    <td class="right num ${liveMargin>0.3?'pos':liveMargin<0.1?'neg':''}">${(liveMargin*100).toFixed(1)}%</td>
     <td class="num">${d.c}/${d.s} <span class="dim">(${Math.round(fill*100)}%)</span></td>
   </tr>`;
 });
+(function(){
+  const totR = trips2027.reduce((a,d)=>a+d.r,0);
+  const totP = trips2027.reduce((a,d)=>a+((d.listPP-d.costPP)*d.c),0);
+  const totM = totR > 0 ? totP/totR : 0;
+  const totC = trips2027.reduce((a,d)=>a+d.c,0);
+  const totS = trips2027.reduce((a,d)=>a+d.s,0);
+  document.getElementById('trips2027total').innerHTML = `
+    <td><strong>TOTAL</strong></td>
+    <td class="right num">${fmt$(totR)}</td>
+    <td class="right num ${totP>0?'pos':'neg'}">${fmt$(Math.round(totP))}</td>
+    <td class="right num">${(totM*100).toFixed(1)}%</td>
+    <td class="num dim">${totC}/${totS}</td>`;
+})();
 
-// ─── MOVEMENT PANEL (Oct 27 → Nov 10) ───
-const snapshotPrev = 'Oct 27';
-const snapshotNow  = 'Nov 10';
-const movement = [
-  {name:'Florida',          dep:'2027-01-11', paxPrev:15, paxNow:15, revPrev:51000,  revNow:51000,  note:'No movement — BF campaign needed urgently'},
-  {name:'Texas',            dep:'2027-02-15', paxPrev:30, paxNow:31, revPrev:103600, revNow:103600, note:'+1 pax'},
-  {name:'Southeast',        dep:'2027-03-01', paxPrev:36, paxNow:36, revPrev:127350, revNow:127350, note:'Holding steady'},
-  {name:'Arizona',          dep:'2027-03-08', paxPrev:34, paxNow:34, revPrev:142800, revNow:142800, note:'Holding steady'},
-  {name:'Ark Encounter',    dep:'2027-04-12', paxPrev:40, paxNow:40, revPrev:69900,  revNow:69900,  note:'Strong — 77% capacity'},
-  {name:'Michigan Tulips',  dep:'2027-05-03', paxPrev:15, paxNow:17, revPrev:24700,  revNow:28200,  note:'+2 pax (+$3,500)'},
-  {name:'Ireland #1',       dep:'2027-05-03', paxPrev:12, paxNow:12, revPrev:59400,  revNow:59400,  note:'No movement'},
-  {name:'Northern CA',      dep:'2027-05-10', paxPrev:44, paxNow:46, revPrev:224400, revNow:239700, note:'+2 pax (+$15,300) — nearly sold out'},
-  {name:'Nashville',        dep:'2027-05-17', paxPrev:12, paxNow:17, revPrev:24000,  revNow:34550,  note:'+5 pax (+$10,550) ✓'},
-  {name:'Japan #1',         dep:'2027-05-31', paxPrev:14, paxNow:14, revPrev:141350, revNow:141350, note:'Holding'},
-  {name:'Alaska',           dep:'2027-06-07', paxPrev:28, paxNow:33, revPrev:155700, revNow:190350, note:'+5 pax (+$34,650) ✓'},
-  {name:'Ireland #2',       dep:'2027-08-03', paxPrev:21, paxNow:21, revPrev:100950, revNow:100950, note:'Holding'},
-  {name:'Colorado Trains',  dep:'2027-08-06', paxPrev:34, paxNow:34, revPrev:154400, revNow:154400, note:'Holding steady'},
-  {name:'Italy #1',         dep:'2027-03-30', paxPrev:13, paxNow:13, revPrev:93350,  revNow:93350,  note:'No movement'},
-  {name:'Portugal',         dep:'2027-04-19', paxPrev:2,  paxNow:2,  revPrev:5350,   revNow:5350,   note:'No movement — needs attention'},
-  {name:'Kansas City/KC',   dep:'2027-04-05', paxPrev:6,  paxNow:6,  revPrev:11700,  revNow:11700,  note:'No movement'},
+// ─── CHANGE IN LAST WEEK ───
+// Before = Nov 10 snapshot; Now = Nov 24 WeTravel export
+const weekChanges = [
+  {name:'Florida',         dep:'2027-01-11', before:15, now:17, revBefore:51000,  revNow:57400,  note:'+2 pax (+$6,400) — 48 days to departure, Black Friday push critical'},
+  {name:'Texas',           dep:'2027-02-15', before:31, now:31, revBefore:103600, revNow:103200, note:'Holding — 1 cancellation offset'},
+  {name:'Southeast',       dep:'2027-03-01', before:36, now:39, revBefore:127350, revNow:138750, note:'+3 pax (+$11,400) ✓'},
+  {name:'Arizona',         dep:'2027-03-08', before:34, now:34, revBefore:142800, revNow:142000, note:'Holding steady'},
+  {name:'Italy #1',        dep:'2027-03-30', before:13, now:13, revBefore:93350,  revNow:93350,  note:'No movement'},
+  {name:'Ark Encounter',   dep:'2027-04-12', before:40, now:47, revBefore:69900,  revNow:81700,  note:'+7 pax (+$11,800) ✓ — 90% full'},
+  {name:'Portugal',        dep:'2027-04-19', before:2,  now:4,  revBefore:5350,   revNow:16050,  note:'+2 pax (+$10,700) ✓ — still very low'},
+  {name:'Kansas City/KC',  dep:'2027-04-05', before:6,  now:8,  revBefore:11700,  revNow:15600,  note:'+2 pax (+$3,900)'},
+  {name:'Michigan Tulips', dep:'2027-05-03', before:17, now:20, revBefore:28200,  revNow:32800,  note:'+3 pax (+$4,600) ✓'},
+  {name:'Ireland #1',      dep:'2027-05-03', before:12, now:12, revBefore:59400,  revNow:59400,  note:'No movement'},
+  {name:'Northern CA',     dep:'2027-05-10', before:46, now:46, revBefore:239700, revNow:239700, note:'Holding — near sold out (88%)'},
+  {name:'Nashville',       dep:'2027-05-17', before:17, now:19, revBefore:34550,  revNow:38350,  note:'+2 pax (+$3,800) ✓'},
+  {name:'Japan #1',        dep:'2027-05-31', before:14, now:14, revBefore:141350, revNow:141350, note:'Holding (56% — needs push)'},
+  {name:'Alaska',          dep:'2027-06-07', before:33, now:33, revBefore:190350, revNow:190350, note:'Holding steady (67%)'},
+  {name:'Ireland #2',      dep:'2027-08-03', before:21, now:27, revBefore:100950, revNow:129450, note:'+6 pax (+$28,500) ✓✓ — 96% full!'},
+  {name:'Colorado Trains', dep:'2027-08-06', before:34, now:34, revBefore:154400, revNow:154400, note:'Holding steady'},
+  {name:'Iceland',         dep:'2027-09-13', before:1,  now:2,  revBefore:5299,   revNow:10598,  note:'+1 pax — very early stage'},
 ];
 
-(function renderMovement() {
-  const rows = movement.filter(m => m.paxNow !== m.paxPrev || m.revNow !== m.revPrev || m.note.includes('urgently') || m.note.includes('attention'));
-  const allRows = movement;
-  let totalPaxDelta = 0, totalRevDelta = 0;
-  allRows.forEach(m => { totalPaxDelta += (m.paxNow - m.paxPrev); totalRevDelta += (m.revNow - m.revPrev); });
-
-  // Summary chips
-  const movers = allRows.filter(m => m.paxNow !== m.paxPrev);
-  const noMove = allRows.filter(m => m.paxNow === m.paxPrev && !m.note.includes('urgently') && !m.note.includes('attention'));
-  document.getElementById('movementSummary').innerHTML = `
-    <div style="background:var(--green-bg);border:1px solid var(--green);border-radius:6px;padding:8px 14px;font-size:12px">
-      <span style="color:var(--green);font-weight:600">${movers.length} trips gained pax</span>
-      <span style="color:var(--fg-muted);margin-left:6px">+${totalPaxDelta} travelers · +${fmt$(totalRevDelta)} registered revenue</span>
+(function renderWeekChange(){
+  let paxDelta = 0, revDelta = 0;
+  weekChanges.forEach(m => { paxDelta += m.now - m.before; revDelta += m.revNow - m.revBefore; });
+  const movers = weekChanges.filter(m => m.now !== m.before).length;
+  document.getElementById('changeSummary').innerHTML = `
+    <div class="change-chip chip-green">
+      <strong style="color:var(--green)">${movers} trips gained pax</strong>
+      <span style="color:var(--fg-muted)">+${paxDelta} travelers · +${fmt$(revDelta)} revenue</span>
     </div>
-    <div style="background:var(--red-bg);border:1px solid var(--red);border-radius:6px;padding:8px 14px;font-size:12px">
-      <span style="color:var(--red);font-weight:600">Florida: 0 movement</span>
-      <span style="color:var(--fg-muted);margin-left:6px">62 days to departure · Black Friday is critical</span>
+    <div class="change-chip chip-green">
+      <strong style="color:var(--green)">Ireland #2: 96% full</strong>
+      <span style="color:var(--fg-muted)">+6 pax this fortnight · $129K booked</span>
     </div>
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:8px 14px;font-size:12px;color:var(--fg-muted)">
-      Snapshot: <strong>${snapshotPrev}</strong> → <strong>${snapshotNow}</strong>
-    </div>`;
+    <div class="change-chip chip-neutral">Nov 10 → Nov 24</div>`;
 
-  const tb = document.getElementById('movementTable');
-  tb.innerHTML = allRows.map(m => {
-    const paxDelta = m.paxNow - m.paxPrev;
-    const revDelta = m.revNow - m.revPrev;
-    const paxClass = paxDelta > 0 ? 'pos' : paxDelta < 0 ? 'neg' : 'dim';
-    const revClass = revDelta > 0 ? 'pos' : revDelta < 0 ? 'neg' : 'dim';
-    const paxStr  = paxDelta > 0 ? `+${paxDelta}` : paxDelta < 0 ? `${paxDelta}` : '—';
-    const revStr  = revDelta > 0 ? `+${fmt$(revDelta)}` : revDelta < 0 ? `-${fmt$(-revDelta)}` : '—';
-    const depStr  = new Date(m.dep).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-    const rowStyle = m.note.includes('urgently') ? 'background:var(--red-bg)' : '';
-    return `<tr style="${rowStyle}">
-      <td>${m.name}</td>
-      <td class="dim num">${depStr}</td>
-      <td class="right num dim">${m.paxPrev}</td>
-      <td class="right num">${m.paxNow}</td>
-      <td class="right num ${paxClass}" style="font-weight:600">${paxStr}</td>
-      <td class="right num dim">${fmt$(m.revPrev)}</td>
-      <td class="right num">${fmt$(m.revNow)}</td>
-      <td class="right num ${revClass}" style="font-weight:600">${revStr}</td>
+  document.getElementById('changeTable').innerHTML = weekChanges.map(m => {
+    const pd = m.now - m.before, rd = m.revNow - m.revBefore;
+    const pc = pd > 0 ? 'pos' : pd < 0 ? 'neg' : 'dim';
+    const rc = rd > 0 ? 'pos' : rd < 0 ? 'neg' : 'dim';
+    const ps = pd > 0 ? `+${pd}` : pd < 0 ? `${pd}` : '—';
+    const rs = rd > 0 ? `+${fmt$(rd)}` : rd < 0 ? `-${fmt$(-rd)}` : '—';
+    const dep = new Date(m.dep).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    const rowBg = m.note.includes('urgently') ? 'background:var(--red-bg)' : '';
+    return `<tr style="${rowBg}">
+      <td>${m.name}</td><td class="dim num">${dep}</td>
+      <td class="right num dim">${m.before}</td><td class="right num">${m.now}</td>
+      <td class="right num ${pc}" style="font-weight:600">${ps}</td>
+      <td class="right num dim">${fmt$(m.revBefore)}</td><td class="right num">${fmt$(m.revNow)}</td>
+      <td class="right num ${rc}" style="font-weight:600">${rs}</td>
       <td class="dim" style="font-size:12px">${m.note}</td>
     </tr>`;
   }).join('');
 })();
 
-// ─── TRIP HEALTH TABLE (WeTravel data, Nov 10) ───
-const today = new Date('2026-11-10');
-function daysDiff(d) {
-  return Math.round((new Date(d) - today) / 86400000);
-}
-function ragColor(pax, cap, days) {
-  const fill = pax / cap;
-  if (days <= 0) return 'dim';
-  if (days <= 120 && fill < 0.35) return 'red';
-  if (fill < 0.60) return 'amber';
+// ─── TRIP OCCUPANCY ───
+const refDate = new Date('2026-11-24');
+function daysTo(d) { return Math.round((new Date(d) - refDate) / 86400000); }
+function ragColor(pax,cap,days) {
+  const f = pax/cap;
+  if (days<=0) return 'dim';
+  if (days<=120 && f<0.35) return 'red';
+  if (f<0.60) return 'amber';
   return 'green';
 }
-
+// Live from WeTravel export Nov 24 2026
 const tripData = [
-  {name:'Florida', dep:'2027-01-11', pax:15, cap:52},
-  {name:'Texas', dep:'2027-02-15', pax:31, cap:52},
-  {name:'Southeast', dep:'2027-03-01', pax:36, cap:52},
-  {name:'Arizona Spring Training', dep:'2027-03-08', pax:34, cap:52},
-  {name:'Italy #1', dep:'2027-03-30', pax:13, cap:25},
-  {name:'Portugal', dep:'2027-04-19', pax:2, cap:25},
-  {name:'St Louis/KC', dep:'2027-04-05', pax:6, cap:52},
-  {name:'Michigan Tulips', dep:'2027-05-03', pax:17, cap:52},
-  {name:'Ireland #1', dep:'2027-05-03', pax:12, cap:30},
-  {name:'Ark Encounter', dep:'2027-04-12', pax:40, cap:52},
-  {name:'Northern CA', dep:'2027-05-10', pax:46, cap:52},
-  {name:'Nashville', dep:'2027-05-17', pax:17, cap:52},
-  {name:'Japan #1', dep:'2027-05-31', pax:14, cap:25},
-  {name:'Japan #2', dep:'2027-06-21', pax:0, cap:25},
-  {name:'Alaska', dep:'2027-06-07', pax:33, cap:49},
-  {name:'Ireland #2', dep:'2027-08-03', pax:21, cap:30},
-  {name:'Colorado Trains', dep:'2027-08-06', pax:34, cap:52},
-  {name:'England & Scotland', dep:'2027-07-19', pax:0, cap:25},
-  {name:'Rhine River', dep:'2027-07-09', pax:1, cap:1},
-  {name:'Door County', dep:'2027-05-23', pax:0, cap:52},
+  {name:'Florida Relaxation',    dep:'2027-01-11', pax:17, cap:52},
+  {name:'Texas Treasures',       dep:'2027-02-15', pax:31, cap:52},
+  {name:'Southeast Splendor',    dep:'2027-03-01', pax:39, cap:52},
+  {name:'Arizona Spring Training',dep:'2027-03-08', pax:34, cap:52},
+  {name:'Italy (Rome & Tuscany)',dep:'2027-03-30', pax:13, cap:25},
+  {name:'Portugal',              dep:'2027-04-19', pax:4,  cap:25},
+  {name:'Kansas City/St Louis',  dep:'2027-04-05', pax:8,  cap:52},
+  {name:'Michigan Tulips',       dep:'2027-05-03', pax:20, cap:52},
+  {name:'Ireland Adventure #1',  dep:'2027-05-03', pax:12, cap:30},
+  {name:'Ark Encounter',         dep:'2027-04-12', pax:47, cap:52},
+  {name:'Northern California',   dep:'2027-05-10', pax:46, cap:52},
+  {name:'Nashville',             dep:'2027-05-17', pax:19, cap:52},
+  {name:'Japan & S.Korea #1',    dep:'2027-05-31', pax:14, cap:25},
+  {name:'Door County',           dep:'2027-05-23', pax:0,  cap:52},
+  {name:'Alaska',                dep:'2027-06-07', pax:33, cap:49},
+  {name:'Japan & S.Korea #2',    dep:'2027-06-21', pax:0,  cap:25},
+  {name:'Rhine River Cruise',    dep:'2027-07-09', pax:1,  cap:1},
+  {name:'England & Scotland',    dep:'2027-07-19', pax:0,  cap:25},
+  {name:'Ireland Adventure #2',  dep:'2027-08-03', pax:27, cap:28},
+  {name:'Colorado Trains',       dep:'2027-08-06', pax:34, cap:52},
+  {name:'Iceland',               dep:'2027-09-13', pax:2,  cap:14},
 ];
 
-function actions(name, pax, cap, days) {
-  const fill = pax/cap;
-  const out = [];
-  if (days > 0 && days <= 120 && fill < 0.35) out.push('🔴 Push email campaign');
-  if (days > 0 && days <= 60 && fill < 0.6) out.push('📞 Direct outreach');
-  if (pax === 0 && days < 180) out.push('⚠️ No bookings yet');
-  if (fill >= 0.95) out.push('🎯 Near full');
-  if (fill >= 1.0) out.push('✅ Fully booked');
+function tripActions(name,pax,cap,days){
+  const f=pax/cap; const out=[];
+  if(days>0&&days<=120&&f<0.35) out.push('🔴 Push email campaign');
+  if(days>0&&days<=60&&f<0.6)   out.push('📞 Direct outreach');
+  if(pax===0&&days<180)          out.push('⚠️ No bookings yet');
+  if(f>=0.95)                    out.push('🎯 Near full');
+  if(f>=1.0)                     out.push('✅ Fully booked');
   return out.join(' · ') || '—';
 }
 
-function renderTrips(filter) {
+function renderTrips(filter){
   const rows = tripData
-    .map(t => ({...t, days: daysDiff(t.dep), rag: ragColor(t.pax, t.cap, daysDiff(t.dep))}))
-    .filter(t => t.days > 0)
-    .sort((a,b) => a.days - b.days)
-    .filter(t => {
-      if (filter === 'all') return true;
-      if (filter === 'action') return t.rag === 'red';
-      if (filter === 'watch') return t.rag === 'amber';
-      if (filter === 'ok') return t.rag === 'green';
-      return true;
-    });
-
-  const tb = document.getElementById('tripTable');
-  tb.innerHTML = rows.map(t => {
-    const fill = t.pax/t.cap;
-    const fillPct = Math.round(fill*100);
-    const barColor = t.rag === 'green' ? 'var(--green)' : t.rag === 'amber' ? 'var(--amber)' : 'var(--red)';
-    const depDate = new Date(t.dep).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-    const ragLabel = t.rag === 'green' ? 'ON TRACK' : t.rag === 'amber' ? 'WATCH' : 'ACTION';
+    .map(t=>({...t,days:daysTo(t.dep),rag:ragColor(t.pax,t.cap,daysTo(t.dep))}))
+    .filter(t=>t.days>0)
+    .sort((a,b)=>a.days-b.days)
+    .filter(t=>filter==='all'||t.rag===filter.replace('action','red').replace('watch','amber').replace('ok','green'));
+  document.getElementById('tripTable').innerHTML = rows.map(t=>{
+    const f=t.pax/t.cap;
+    const fp=Math.round(f*100);
+    const bc=t.rag==='green'?'var(--green)':t.rag==='amber'?'var(--amber)':'var(--red)';
+    const dep=new Date(t.dep).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    const lbl=t.rag==='green'?'ON TRACK':t.rag==='amber'?'WATCH':'ACTION';
     return `<tr>
       <td>${t.name}</td>
-      <td class="num">${depDate} <span class="dim">(${t.days}d)</span></td>
+      <td class="num">${dep} <span class="dim">(${t.days}d)</span></td>
       <td class="right num">${t.pax}</td>
       <td class="right num dim">${t.cap}</td>
-      <td>
-        <div class="fill-bar-wrap">
-          <div class="fill-bar"><div class="fill-bar-inner" style="width:${Math.min(fillPct,100)}%;background:${barColor}"></div></div>
-          <div class="fill-pct" style="color:${barColor}">${fillPct}%</div>
-        </div>
-      </td>
-      <td><span class="rag ${t.rag}">${ragLabel}</span></td>
-      <td style="font-size:12px;color:var(--fg-muted);max-width:220px;white-space:normal">${actions(t.name, t.pax, t.cap, t.days)}</td>
+      <td><div class="fill-bar-wrap"><div class="fill-bar"><div class="fill-bar-inner" style="width:${Math.min(fp,100)}%;background:${bc}"></div></div><div class="fill-pct" style="color:${bc}">${fp}%</div></div></td>
+      <td><span class="rag ${t.rag}">${lbl}</span></td>
+      <td style="font-size:12px;color:var(--fg-muted);max-width:220px;white-space:normal">${tripActions(t.name,t.pax,t.cap,t.days)}</td>
     </tr>`;
   }).join('');
 }
 
-function filterTrips(filter, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+function filterTrips(f,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  renderTrips(filter);
+  renderTrips(f);
 }
 
 // ─── INIT ───
 renderTrips('all');
 drawChart();
-
-// Redraw chart on theme change
-const obs = new MutationObserver(() => drawChart());
-obs.observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']});
-window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change', () => drawChart());
+const obs = new MutationObserver(()=>drawChart());
+obs.observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',()=>drawChart());
 </script>
