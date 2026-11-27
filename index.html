@@ -318,9 +318,12 @@ tr.stretch-row td { color: var(--accent); font-weight: 500; }
     inp.addEventListener("keydown", e => { if(e.key==="Enter") attempt(); });
     inp.focus();
   }
-  let authed = false;
-  try { authed = sessionStorage.getItem("tct_auth") === "1"; } catch(e){}
-  if (!authed) showGate();
+  function init() {
+    let authed = false;
+    try { authed = sessionStorage.getItem("tct_auth") === "1"; } catch(e){}
+    if (!authed) showGate();
+  }
+  if (document.body) { init(); } else { document.addEventListener("DOMContentLoaded", init); }
 })();
 </script>
 
