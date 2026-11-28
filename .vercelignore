@@ -1,0 +1,8 @@
+scripts/
+src/
+config/
+data/
+test/
+fixtures/
+docs/
+.github/

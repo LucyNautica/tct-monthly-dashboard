@@ -1,0 +1,76 @@
+{
+  "year": 2026,
+  "sheets": {
+    "kpi": {
+      "id": "16aw82rXVB1cGP1RUFew4CRduDjrSmnYhoHz1oaDsLyQ",
+      "tabs": {
+        "actual": "2026 Actual",
+        "forecast": "2026 Forecast",
+        "prior": "Booking P&L 2025",
+        "tracker": "2026 Q1-4 Tracker",
+        "working": "Working Data"
+      }
+    },
+    "pricingCurrent": {
+      "id": "1ihALIUyhSFsMCfY2CYqLkb-nzRa3WUujDoJ0Z8PjeFE",
+      "tab": "2026 Totals - 2026 Totals"
+    },
+    "pricingNext": {
+      "id": "1DBoMvcKsmACfvYVTTowfrOPrSC4lzQVsl1ARRm0te_k",
+      "tab": "SUMMARY — Cash Flow Input"
+    }
+  },
+  "targets": {
+    "base": 2500000,
+    "stretch": 3500000,
+    "nextBase": 5000000,
+    "nextStretch": 6000000,
+    "nextDepartureBase": 4585255,
+    "nextDepartureStretch": 5394416
+  },
+  "chart": {
+    "_note": "The '2025 Actual' bars have always been this total spread by the 2025 seasonality row, not the monthly 2025 actuals. Set to null to use the real monthly 2025 figures from the Booking P&L 2025 tab.",
+    "priorYearBarsTotal": 2280000
+  },
+  "tripsCurrentYear": {
+    "exclude": [
+      "WLA - DC",
+      "New York",
+      "Rose Bowl"
+    ],
+    "rename": {
+      "Black hills": "Black Hills",
+      "Mississippi River": "Mississippi R."
+    }
+  },
+  "wetravel": {
+    "_note": "WeTravel money fields are integers. amountDivisor 100 = cents. The 'per-pax revenue' safety check fails if this is wrong.",
+    "amountDivisor": 100,
+    "matchDays": 3,
+    "overrides": {},
+    "rename": {},
+    "_note_names": "displayNames: pricing-sheet tour name (without year/'New') -> label shown on the dashboard. rename: WeTravel trip id -> label (occupancy table).",
+    "displayNames": {
+      "Arizona Spring Training": "Arizona",
+      "St Louis-Kc": "Kansas City/KC",
+      "Ark": "Ark Encounter",
+      "Michigan": "Michigan Tulips",
+      "Norther CA": "Northern CA",
+      "Alaska (Land only)": "Alaska",
+      "Alaska (Collette)": "Alaska (Collette)",
+      "Scotland/England": "England & Scotland",
+      "Duluth_Twin Cities": "Duluth/Twin Cities"
+    }
+  },
+  "occupancy": {
+    "windowDays": 300
+  },
+  "checks": {
+    "maxRevenueDropPct": 5,
+    "maxPaxDropPct": 15,
+    "maxTripCountDropPct": 30,
+    "minRevenuePerPax": 300,
+    "maxRevenuePerPax": 25000,
+    "maxOverbookPct": 10
+  }
+}

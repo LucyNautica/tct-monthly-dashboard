@@ -1,0 +1,91 @@
+name: Weekly dashboard update
+
+on:
+  schedule:
+    - cron: '0 11 * * 1'   # Mondays 11:00 UTC (5am US Central, 12:00 CET)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DASHBOARD_URL: ${{ vars.DASHBOARD_URL || 'https://tct-monthly-dashboard.vercel.app' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build dashboard from Google Sheets + WeTravel
+        id: build
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          WETRAVEL_API_KEY: ${{ secrets.WETRAVEL_API_KEY }}
+        run: node scripts/update.mjs
+
+      - name: Commit and push
+        id: push
+        if: steps.build.outputs.status == 'published'
+        run: |
+          git config user.name "tct-dashboard-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html version.txt data/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes to publish."
+          else
+            git commit -m "Weekly dashboard update $(date -u +%Y-%m-%d)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Confirm the live site serves this build
+        if: steps.push.outputs.changed == 'true'
+        run: |
+          want="$(cat version.txt)"
+          for i in $(seq 1 30); do
+            got="$(curl -fsS "$DASHBOARD_URL/version.txt?t=$(date +%s)" 2>/dev/null | tr -d '[:space:]' || true)"
+            if [ "$got" = "$want" ]; then echo "Live site serves build $want."; exit 0; fi
+            echo "Waiting for deploy (live: '${got:-none}', want: $want)..."; sleep 20
+          done
+          echo "Live site did not show build $want after 10 minutes."; exit 1
+
+      - name: Close open alert
+        if: success() && steps.build.outputs.status == 'published'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for n in $(gh issue list --label dashboard-alert --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Resolved: the $(date -u +%Y-%m-%d) update published and the live site confirmed it."
+          done
+
+      - name: Raise alert (blocked or failed, nothing published)
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create dashboard-alert --color D93F0B --description "Weekly dashboard update needs attention" 2>/dev/null || true
+          body="$( [ -f data/last-run.md ] && cat data/last-run.md || echo 'The run failed before writing a report.')"
+          body="$body
+
+          Run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          The dashboard still shows the previous week's data."
+          open="$(gh issue list --label dashboard-alert --state open --json number --jq '.[0].number')"
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body "$body"
+          else
+            gh issue create --title "Dashboard update blocked: $(date -u +%Y-%m-%d)" --label dashboard-alert --body "$body"
+          fi

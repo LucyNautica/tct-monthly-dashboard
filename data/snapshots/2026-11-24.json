@@ -1,0 +1,174 @@
+{
+  "date": "2026-11-24",
+  "_source": "Seeded from Lucy's dashboard (WeTravel export Nov 24 2026). No WeTravel IDs; matched by departure date + name.",
+  "trips": [
+    {
+      "uuid": null,
+      "title": "Florida Relaxation",
+      "departure": "2027-01-11",
+      "capacity": 52,
+      "pax": 17,
+      "revenue": 57400
+    },
+    {
+      "uuid": null,
+      "title": "Texas Treasures",
+      "departure": "2027-02-15",
+      "capacity": 52,
+      "pax": 31,
+      "revenue": 103200
+    },
+    {
+      "uuid": null,
+      "title": "Southeast Splendor",
+      "departure": "2027-03-01",
+      "capacity": 52,
+      "pax": 39,
+      "revenue": 138750
+    },
+    {
+      "uuid": null,
+      "title": "Arizona Spring Training",
+      "departure": "2027-03-08",
+      "capacity": 52,
+      "pax": 34,
+      "revenue": 142000
+    },
+    {
+      "uuid": null,
+      "title": "Italy (Rome & Tuscany)",
+      "departure": "2027-03-30",
+      "capacity": 25,
+      "pax": 13,
+      "revenue": 93350
+    },
+    {
+      "uuid": null,
+      "title": "Kansas City/St Louis",
+      "departure": "2027-04-05",
+      "capacity": 52,
+      "pax": 8,
+      "revenue": 15600
+    },
+    {
+      "uuid": null,
+      "title": "Ark Encounter",
+      "departure": "2027-04-12",
+      "capacity": 52,
+      "pax": 47,
+      "revenue": 81700
+    },
+    {
+      "uuid": null,
+      "title": "Portugal",
+      "departure": "2027-04-19",
+      "capacity": 25,
+      "pax": 4,
+      "revenue": 16050
+    },
+    {
+      "uuid": null,
+      "title": "Ireland Adventure #1",
+      "departure": "2027-05-03",
+      "capacity": 30,
+      "pax": 12,
+      "revenue": 59400
+    },
+    {
+      "uuid": null,
+      "title": "Michigan Tulips",
+      "departure": "2027-05-03",
+      "capacity": 52,
+      "pax": 20,
+      "revenue": 32800
+    },
+    {
+      "uuid": null,
+      "title": "Northern California",
+      "departure": "2027-05-10",
+      "capacity": 52,
+      "pax": 46,
+      "revenue": 239700
+    },
+    {
+      "uuid": null,
+      "title": "Nashville",
+      "departure": "2027-05-17",
+      "capacity": 52,
+      "pax": 19,
+      "revenue": 38350
+    },
+    {
+      "uuid": null,
+      "title": "Door County",
+      "departure": "2027-05-23",
+      "capacity": 52,
+      "pax": 0,
+      "revenue": 0
+    },
+    {
+      "uuid": null,
+      "title": "Japan & S.Korea #1",
+      "departure": "2027-05-31",
+      "capacity": 25,
+      "pax": 14,
+      "revenue": 141350
+    },
+    {
+      "uuid": null,
+      "title": "Alaska",
+      "departure": "2027-06-07",
+      "capacity": 49,
+      "pax": 33,
+      "revenue": 190350
+    },
+    {
+      "uuid": null,
+      "title": "Japan & S.Korea #2",
+      "departure": "2027-06-21",
+      "capacity": 25,
+      "pax": 0,
+      "revenue": 0
+    },
+    {
+      "uuid": null,
+      "title": "Rhine River Cruise",
+      "departure": "2027-07-09",
+      "capacity": 1,
+      "pax": 1,
+      "revenue": 0
+    },
+    {
+      "uuid": null,
+      "title": "England & Scotland",
+      "departure": "2027-07-19",
+      "capacity": 25,
+      "pax": 0,
+      "revenue": 0
+    },
+    {
+      "uuid": null,
+      "title": "Ireland Adventure #2",
+      "departure": "2027-08-03",
+      "capacity": 28,
+      "pax": 27,
+      "revenue": 129450
+    },
+    {
+      "uuid": null,
+      "title": "Colorado Trains",
+      "departure": "2027-08-06",
+      "capacity": 52,
+      "pax": 34,
+      "revenue": 154400
+    },
+    {
+      "uuid": null,
+      "title": "Iceland",
+      "departure": "2027-09-13",
+      "capacity": 14,
+      "pax": 2,
+      "revenue": 10598
+    }
+  ]
+}
