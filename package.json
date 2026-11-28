@@ -3,10 +3,15 @@
   "private": true,
   "type": "module",
   "description": "Weekly auto-update for the TCT commercial dashboard",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "update": "node scripts/update.mjs",
     "update:fixtures": "node scripts/update.mjs --fixtures fixtures --no-snapshot",
     "test": "node --test \"test/*.test.mjs\""
+  },
+  "dependencies": {
+    "@vercel/functions": "3.11.3"
   }
 }
