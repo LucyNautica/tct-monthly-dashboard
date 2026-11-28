@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "description": "Weekly auto-update for the TCT commercial dashboard",
-  "engines": { "node": ">=20" },
+  "engines": { "node": ">=22" },
   "scripts": {
     "update": "node scripts/update.mjs",
     "update:fixtures": "node scripts/update.mjs --fixtures fixtures --no-snapshot",
