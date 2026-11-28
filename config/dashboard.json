@@ -29,15 +29,11 @@
     "nextDepartureStretch": 5394416
   },
   "chart": {
-    "_note": "The '2025 Actual' bars have always been this total spread by the 2025 seasonality row, not the monthly 2025 actuals. Set to null to use the real monthly 2025 figures from the Booking P&L 2025 tab.",
-    "priorYearBarsTotal": 2280000
+    "_note": "null = the '2025 Actual' bars use the real monthly 2025 bookings from the Booking P&L 2025 tab. A number (e.g. 2280000) spreads that total by the 2025 seasonality row instead, which is what the hand-made dashboard did.",
+    "priorYearBarsTotal": null
   },
   "tripsCurrentYear": {
-    "exclude": [
-      "WLA - DC",
-      "New York",
-      "Rose Bowl"
-    ],
+    "exclude": [],
     "rename": {
       "Black hills": "Black Hills",
       "Mississippi River": "Mississippi R."
